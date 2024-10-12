@@ -1,0 +1,12 @@
+/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverCore/bin/Debug/net8.0/SpeedSolverCore.deps.json
+/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverCore/bin/Debug/net8.0/SpeedSolverCore.dll
+/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverCore/bin/Debug/net8.0/SpeedSolverCore.pdb
+/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverCore/obj/Debug/net8.0/SpeedSolverCore.GeneratedMSBuildEditorConfig.editorconfig
+/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverCore/obj/Debug/net8.0/SpeedSolverCore.AssemblyInfoInputs.cache
+/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverCore/obj/Debug/net8.0/SpeedSolverCore.AssemblyInfo.cs
+/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverCore/obj/Debug/net8.0/SpeedSolverCore.csproj.CoreCompileInputs.cache
+/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverCore/obj/Debug/net8.0/SpeedSolverCore.sourcelink.json
+/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverCore/obj/Debug/net8.0/SpeedSolverCore.dll
+/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverCore/obj/Debug/net8.0/refint/SpeedSolverCore.dll
+/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverCore/obj/Debug/net8.0/SpeedSolverCore.pdb
+/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverCore/obj/Debug/net8.0/ref/SpeedSolverCore.dll
