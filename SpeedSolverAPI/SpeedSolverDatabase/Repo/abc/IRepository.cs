@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+
 namespace SpeedSolverDatabase.Repo.abc;
 
 public interface IRepository<T> where T : class

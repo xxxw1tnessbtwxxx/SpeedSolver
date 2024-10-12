@@ -28,3 +28,6 @@ D:/Development/speedsolver/SpeedSolverAPI/SpeedSolverDatabase/obj/Debug/net8.0/S
 /Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverDatabase/obj/Debug/net8.0/SpeedSolverDatabase.pdb
 /Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverDatabase/obj/Debug/net8.0/SpeedSolverDatabase.genruntimeconfig.cache
 /Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverDatabase/obj/Debug/net8.0/ref/SpeedSolverDatabase.dll
+/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverDatabase/bin/Debug/net8.0/SpeedSolverCore.dll
+/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverDatabase/bin/Debug/net8.0/SpeedSolverCore.pdb
+/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverDatabase/obj/Debug/net8.0/SpeedSol.ECC5E6C7.Up2Date

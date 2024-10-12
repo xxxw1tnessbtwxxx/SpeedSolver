@@ -15,4 +15,12 @@
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.8" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Repo\utils\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SpeedSolverCore\SpeedSolverCore.csproj" />
+  </ItemGroup>
+
 </Project>
