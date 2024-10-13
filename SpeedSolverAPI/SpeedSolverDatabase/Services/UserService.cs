@@ -9,7 +9,7 @@ namespace SpeedSolverDatabase.Services;
 
 public class UserService(IRepository<User> repo): IUserService
 {
-    public async Task Register(RegisterRequests registerRequest)
+    public void Register(RegisterRequests registerRequest)
     {
         try
         {
@@ -21,7 +21,7 @@ public class UserService(IRepository<User> repo): IUserService
         }
         catch (Exception ex)
         {
-
+            Console.WriteLine(ex.Message);
         }
         
     }

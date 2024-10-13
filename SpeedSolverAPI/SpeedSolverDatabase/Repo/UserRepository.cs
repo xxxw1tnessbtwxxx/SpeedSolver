@@ -6,11 +6,11 @@ namespace SpeedSolverDatabase.Repo;
 
 public class UserRepository() : IRepository<User>
 {
-    private SpeedContext? _context = new SpeedContext();
+    private SpeedContext _context = new SpeedContext();
     public void Insert(User entity)
     {
-        this._context?.Users.AddAsync(entity);
-        this._context?.SaveChanges();
+        _context.Users.Add(entity);
+        _context.SaveChanges();
     }
 
     public List<User> FindAll()

@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  speedsolverapi:
+    image: ${DOCKER_REGISTRY-}speedsolverapi
+    build:
+      context: .
+      dockerfile: SpeedSolverAPI/Dockerfile
+    ports:
+        - "5000:5000"
+        - "5001:5001"
+
+  speedsolver.database:
+    image: postgres:latest
+    container_name: speedsolver.database
+    environment:
+        - POSTGRES_DB=speedsolver
+        - POSTGRES_USER=speedsolver
+        - POSTGRES_PASSWORD=555
+    ports:
+        - "5400:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Repo\utils\**" />
+    <EmbeddedResource Remove="Repo\utils\**" />
+    <None Remove="Repo\utils\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.8">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -16,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Repo\utils\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
   <ItemGroup>

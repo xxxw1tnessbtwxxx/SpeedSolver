@@ -1,0 +1,60 @@
+name: dockercompose11747043528665221294
+services:
+  speedsolver.database:
+    container_name: speedsolver.database
+    environment:
+      POSTGRES_DB: speedsolver
+      POSTGRES_PASSWORD: "555"
+      POSTGRES_USER: speedsolver
+    image: postgres:latest
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 5432
+        published: "5432"
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: postgres_data
+        target: /var/lib/postgresql/data
+        volume: {}
+  speedsolverapi:
+    build:
+      context: D:\Development\SpeedSolver\SpeedSolverAPI
+      dockerfile: SpeedSolverAPI/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "5000"
+      ASPNETCORE_HTTPS_PORTS: "5001"
+    image: speedsolverapi
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 5000
+        published: "5000"
+        protocol: tcp
+      - mode: ingress
+        target: 5001
+        published: "5001"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\study\AppData\Roaming/Microsoft/UserSecrets
+        target: /home/app/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\study\AppData\Roaming/ASP.NET/Https
+        target: /home/app/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+networks:
+  default:
+    name: dockercompose11747043528665221294_default
+volumes:
+  postgres_data:
+    name: dockercompose11747043528665221294_postgres_data

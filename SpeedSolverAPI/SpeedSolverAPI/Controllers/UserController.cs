@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using SpeedSolverCore;
 using SpeedSolverDatabase;
+using SpeedSolverDatabase.Models;
 using SpeedSolverDatabase.Repo;
 using SpeedSolverDatabase.Services;
 using SpeedSolverDatabase.Services.abc;
@@ -12,19 +13,32 @@ namespace SpeedSolverAPI.Controllers
     public class UserController : ControllerBase
     {
         [HttpPost("register")]
-        public async Task<ActionResult> Register(RegisterRequests request)
+        public async Task<ActionResult> Register()
         {
+
+            using var ctx = new SpeedContext();
+
             try
             {
-                IUserService service = new UserService(new UserRepository());
-                await service.Register(request);
+                ctx.Users.Add(new User
+                {
+                    Login = "123",
+                    Password = "123"
+                });
+                ctx.SaveChanges();
+                return Ok("Added. Check it manually");
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
-                return BadRequest("Failed to register user");
+                return BadRequest(ex.Message);
             }
 
-            return Ok("Success");
+        }
+
+        [HttpGet("findall")]
+        public async Task<ActionResult> FindAll()
+        {
+            return Ok(new SpeedContext().Users.ToList());
         }
         
     }

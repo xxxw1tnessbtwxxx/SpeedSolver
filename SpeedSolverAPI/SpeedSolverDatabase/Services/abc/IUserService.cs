@@ -4,5 +4,5 @@ namespace SpeedSolverDatabase.Services.abc;
 
 public interface IUserService
 {
-    Task Register(RegisterRequests registerRequest);
+    void Register(RegisterRequests registerRequest);
 }

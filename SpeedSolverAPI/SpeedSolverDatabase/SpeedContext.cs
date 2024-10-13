@@ -25,6 +25,8 @@ namespace SpeedSolverDatabase
         public DbSet<TeamObjective> TeamObjectives { get; set; }
         public DbSet<UnderObjective> UnderObjectives { get; set; }
         public DbSet<User> Users { get; set; }
+
+       
         public SpeedContext()
         {
             try
@@ -39,7 +41,7 @@ namespace SpeedSolverDatabase
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Server=localhost;Username=postgres;Password=123;Database=speedsolver")
+            optionsBuilder.UseNpgsql("Server=speedsolver.database;Port=5432;Username=speedsolver;Password=555;Database=speedsolver")
                 .EnableSensitiveDataLogging();
             base.OnConfiguring(optionsBuilder);
         }
