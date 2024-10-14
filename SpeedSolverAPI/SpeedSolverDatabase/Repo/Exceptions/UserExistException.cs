@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SpeedSolverDatabase.Services
+namespace SpeedSolverDatabase.Repo.Exceptions
 {
-    internal class UserService
+    internal class UserExistException
     {
     }
 }

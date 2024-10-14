@@ -1305,9 +1305,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Development\\SpeedSolver\\SpeedSolverAPI\\SpeedSolverAPI\\SpeedSolverAPI.csproj",
+      "projectUniqueName": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverAPI\\SpeedSolverAPI.csproj",
       "projectName": "SpeedSolverAPI",
-      "projectPath": "D:\\Development\\SpeedSolver\\SpeedSolverAPI\\SpeedSolverAPI\\SpeedSolverAPI.csproj",
+      "projectPath": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverAPI\\SpeedSolverAPI.csproj",
       "packagesPath": "C:\\Users\\study\\.nuget\\packages\\",
       "outputPath": "D:\\Development\\SpeedSolver\\SpeedSolverAPI\\SpeedSolverAPI\\obj\\",
       "projectStyle": "PackageReference",
@@ -1327,11 +1327,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Development\\SpeedSolver\\SpeedSolverAPI\\SpeedSolverCore\\SpeedSolverCore.csproj": {
-              "projectPath": "D:\\Development\\SpeedSolver\\SpeedSolverAPI\\SpeedSolverCore\\SpeedSolverCore.csproj"
+            "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverCore\\SpeedSolverCore.csproj": {
+              "projectPath": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverCore\\SpeedSolverCore.csproj"
             },
-            "D:\\Development\\SpeedSolver\\SpeedSolverAPI\\SpeedSolverDatabase\\SpeedSolverDatabase.csproj": {
-              "projectPath": "D:\\Development\\SpeedSolver\\SpeedSolverAPI\\SpeedSolverDatabase\\SpeedSolverDatabase.csproj"
+            "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverDatabase\\SpeedSolverDatabase.csproj": {
+              "projectPath": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverDatabase\\SpeedSolverDatabase.csproj"
             }
           }
         }

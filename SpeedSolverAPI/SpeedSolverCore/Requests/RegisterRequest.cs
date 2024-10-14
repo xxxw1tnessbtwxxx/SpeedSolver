@@ -2,7 +2,7 @@
 
 namespace SpeedSolverCore;
 
-public class RegisterRequests
+public class RegisterRequest
 {
     [Required] public string Login { get; set; }
     [Required] public string Password { get; set; }

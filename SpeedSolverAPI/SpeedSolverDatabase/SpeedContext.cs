@@ -26,7 +26,19 @@ namespace SpeedSolverDatabase
         public DbSet<UnderObjective> UnderObjectives { get; set; }
         public DbSet<User> Users { get; set; }
 
-       
+
+        public SpeedContext(DbContextOptions options)
+        {
+            try
+            {
+                this.IsConnected = Database.CanConnect();
+            }
+            catch
+            {
+                this.IsConnected = false;
+            }
+        }
+
         public SpeedContext()
         {
             try

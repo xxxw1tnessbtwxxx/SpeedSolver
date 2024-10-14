@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Development\\SpeedSolver\\SpeedSolverAPI\\SpeedSolverCore\\SpeedSolverCore.csproj": {}
+    "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverCore\\SpeedSolverCore.csproj": {}
   },
   "projects": {
-    "D:\\Development\\SpeedSolver\\SpeedSolverAPI\\SpeedSolverCore\\SpeedSolverCore.csproj": {
+    "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverCore\\SpeedSolverCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development\\SpeedSolver\\SpeedSolverAPI\\SpeedSolverCore\\SpeedSolverCore.csproj",
+        "projectUniqueName": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverCore\\SpeedSolverCore.csproj",
         "projectName": "SpeedSolverCore",
-        "projectPath": "D:\\Development\\SpeedSolver\\SpeedSolverAPI\\SpeedSolverCore\\SpeedSolverCore.csproj",
+        "projectPath": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverCore\\SpeedSolverCore.csproj",
         "packagesPath": "C:\\Users\\study\\.nuget\\packages\\",
         "outputPath": "D:\\Development\\SpeedSolver\\SpeedSolverAPI\\SpeedSolverCore\\obj\\",
         "projectStyle": "PackageReference",

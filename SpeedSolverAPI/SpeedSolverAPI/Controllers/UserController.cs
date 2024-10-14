@@ -9,37 +9,13 @@ using SpeedSolverDatabase.Services.abc;
 namespace SpeedSolverAPI.Controllers
 {
     [ApiController]
-    [Route("api/v1/[controller]")]
+    [Route("api/v1/users")]
     public class UserController : ControllerBase
     {
         [HttpPost("register")]
-        public async Task<ActionResult> Register()
+        public async Task<IActionResult> Register([FromHeader] string head, [FromBody] string FromBodyAttribute, int id)
         {
-
-            using var ctx = new SpeedContext();
-
-            try
-            {
-                ctx.Users.Add(new User
-                {
-                    Login = "123",
-                    Password = "123"
-                });
-                ctx.SaveChanges();
-                return Ok("Added. Check it manually");
-            }
-            catch(Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-
+            return Ok();
         }
-
-        [HttpGet("findall")]
-        public async Task<ActionResult> FindAll()
-        {
-            return Ok(new SpeedContext().Users.ToList());
-        }
-        
     }
 }

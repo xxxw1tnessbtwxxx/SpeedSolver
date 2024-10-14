@@ -16,7 +16,7 @@ services:
       - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
       - NUGET_FALLBACK_PACKAGES=
     volumes:
-      - D:\Development\SpeedSolver\SpeedSolverAPI\SpeedSolverAPI:/app:rw
+      - D:\Development\speedsolver\SpeedSolverAPI\SpeedSolverAPI:/app:rw
       - D:\Development\SpeedSolver\SpeedSolverAPI:/src:rw
       - C:\Users\study\vsdbg\vs2017u5:/remote_debugger:rw
       - C:\Users\study\.nuget\packages:/.nuget/packages:ro

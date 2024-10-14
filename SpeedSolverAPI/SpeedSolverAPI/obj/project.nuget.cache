@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XrS92vmax8Y=",
+  "dgSpecHash": "XgFWPrArsgo=",
   "success": true,
-  "projectFilePath": "D:\\Development\\SpeedSolver\\SpeedSolverAPI\\SpeedSolverAPI\\SpeedSolverAPI.csproj",
+  "projectFilePath": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverAPI\\SpeedSolverAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\study\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.8\\microsoft.entityframeworkcore.8.0.8.nupkg.sha512",
     "C:\\Users\\study\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.8\\microsoft.entityframeworkcore.abstractions.8.0.8.nupkg.sha512",

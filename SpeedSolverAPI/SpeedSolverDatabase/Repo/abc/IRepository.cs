@@ -1,11 +1,18 @@
-using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace SpeedSolverDatabase.Repo.abc;
-
-public interface IRepository<T> where T : class
+namespace SpeedSolverDatabase.Repo.abc
 {
-    public void Insert(T entity);
-    public List<T> FindAll();
-    public T FindById(int id);
-    
+    public interface IRepository<T>
+    {
+        public void Insert(T entity);
+        public void Update(T entity);
+        public void Delete(T entity);
+        public void DeleteAll();
+        public T GetById(int id);
+        public List<T> GetAll();
+    }
 }
