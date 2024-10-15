@@ -53,7 +53,7 @@ namespace SpeedSolverDatabase
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Server=speedsolver.database;Port=5432;Username=speedsolver;Password=555;Database=speedsolver")
+            optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Username=speedsolver;Password=555;Database=speedsolver")
                 .EnableSensitiveDataLogging();
             base.OnConfiguring(optionsBuilder);
         }

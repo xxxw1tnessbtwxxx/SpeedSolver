@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SpeedSolverCore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f03a539a8368cb6fb3607edac781796e2fdab635")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79336580b574642b22b59794ce71a459dc844045")]
 [assembly: System.Reflection.AssemblyProductAttribute("SpeedSolverCore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SpeedSolverCore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

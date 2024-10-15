@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace SpeedSolverDatabase.Repo.Exceptions
 {
-    internal class UserExistException
+    public class UserExistException:  Exception
     {
+        public UserExistException(): base("User already exists") { }
     }
 }

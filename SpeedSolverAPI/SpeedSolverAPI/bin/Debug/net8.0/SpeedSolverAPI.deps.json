@@ -180,7 +180,10 @@
       },
       "SpeedSolverCore/1.0.0": {
         "runtime": {
-          "SpeedSolverCore.dll": {}
+          "SpeedSolverCore.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "SpeedSolverDatabase/1.0.0": {
@@ -190,7 +193,10 @@
           "SpeedSolverCore": "1.0.0"
         },
         "runtime": {
-          "SpeedSolverDatabase.dll": {}
+          "SpeedSolverDatabase.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
