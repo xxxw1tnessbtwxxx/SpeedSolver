@@ -8,8 +8,6 @@ namespace SpeedSolverDatabase.Repo.abc
 {
     public abstract class AbcAccessProvider
     {
-
-        public readonly SpeedContext _context = new SpeedContext();
-
+        private readonly SpeedContext _context = new SpeedContext();
     }
 }

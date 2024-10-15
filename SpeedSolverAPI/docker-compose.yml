@@ -7,8 +7,8 @@ services:
       context: .
       dockerfile: SpeedSolverAPI/Dockerfile
     ports:
-        - "5000:5000"
         - "5001:5001"
+        - "5002:5002"
 
   speedsolver.database:
     image: postgres:latest
