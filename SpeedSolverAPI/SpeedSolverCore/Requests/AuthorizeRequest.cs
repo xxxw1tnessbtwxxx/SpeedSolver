@@ -4,8 +4,8 @@ namespace SpeedSolverCore;
 
 public record AuthorizeRequest
 {
-    [Required] string Login { get; init; }
-    [Required] string Password { get; init; }
+    [Required] public string Login { get; init; }
+    [Required] public string Password { get; init; }
 
     public string GenerateBearerToken()
     {

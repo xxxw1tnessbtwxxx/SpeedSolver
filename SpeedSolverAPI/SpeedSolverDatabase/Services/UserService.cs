@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,13 +9,16 @@ using SpeedSolverCore;
 using SpeedSolverDatabase.Helpers;
 using SpeedSolverDatabase.Models;
 using SpeedSolverDatabase.Repo;
+using SpeedSolverDatabase.Repo.Exceptions;
 using SpeedSolverDatabase.Services.abc;
 
 namespace SpeedSolverDatabase.Services
 {
     public class UserService: Service<User>
     {
-        public UserService()
+
+        public static UserService Create() => new UserService();
+        private UserService()
         {
             this._repository = new UserRepository();
         }
@@ -35,6 +39,21 @@ namespace SpeedSolverDatabase.Services
             }
 
             return null;
+        }
+
+        public async Task<User?> Authorize(AuthorizeRequest authorizeRequest)
+        {
+            string password = Crypto.HashPassword(authorizeRequest.Password);
+            var user = this._repository
+                .Filtered(x => x.Login == authorizeRequest.Login && x.Password == password)
+                .FirstOrDefault();
+
+            if (user is null)
+            {
+                throw new FailedLoginException();
+            }
+
+            return user;
         }
         
     }

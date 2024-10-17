@@ -1,0 +1,27 @@
+name: dockercompose12442899000605427502
+services:
+  speedsolver.database:
+    container_name: speedsolver.database
+    environment:
+      POSTGRES_DB: speedsolver
+      POSTGRES_PASSWORD: "555"
+      POSTGRES_USER: speedsolver
+    image: postgres:latest
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 5432
+        published: "5400"
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: postgres_data
+        target: /var/lib/postgresql/data
+        volume: {}
+networks:
+  default:
+    name: dockercompose12442899000605427502_default
+volumes:
+  postgres_data:
+    name: dockercompose12442899000605427502_postgres_data

@@ -17,6 +17,7 @@ namespace SpeedSolverDatabase
 
         public bool IsConnected { get; set; } = false;
 
+        public DbSet<InProjectMessage> InProjectMessages { get; set; }
         public DbSet<Invitation> Invitations { get; set; }
         public DbSet<Objective> Objectives { get; set; }
         public DbSet<Project> Projects { get; set; }
@@ -53,13 +54,14 @@ namespace SpeedSolverDatabase
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Username=speedsolver;Password=555;Database=speedsolver")
+            optionsBuilder.UseNpgsql("Server=localhost;Port=5002;Username=speedsolver;Password=555;Database=speedsolver")
                 .EnableSensitiveDataLogging();
             base.OnConfiguring(optionsBuilder);
         }
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfiguration(new InProjectMessagesConfiguration());
             modelBuilder.ApplyConfiguration(new UnderObjectiveConfiguration());
             modelBuilder.ApplyConfiguration(new TeamObjectiveConfiguration());
             modelBuilder.ApplyConfiguration(new InvitationConfiguration());

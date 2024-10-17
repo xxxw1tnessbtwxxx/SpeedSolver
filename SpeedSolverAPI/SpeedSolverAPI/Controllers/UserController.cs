@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.OpenApi.Any;
 using SpeedSolverCore;
 using SpeedSolverDatabase;
 using SpeedSolverDatabase.Models;
 using SpeedSolverDatabase.Repo;
+using SpeedSolverDatabase.Repo.Exceptions;
 using SpeedSolverDatabase.Services;
 using SpeedSolverDatabase.Services.abc;
 
@@ -15,18 +17,36 @@ namespace SpeedSolverAPI.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register(RegisterRequest registerRequest)
         {
-            UserService userService = new();
             
-            var registeredUser = await userService.Register(registerRequest);
+            var registeredUser = await UserService
+                .Create()
+                .Register(registerRequest);
 
             if (registeredUser != null)
             {
                 return Ok(registeredUser.UserId);
             }
-            else
+
+            return BadRequest("This user still exists. Try new credentials.");
+
+        }
+
+        [HttpPost("authorize")]
+        public async Task<IActionResult> Authorize(AuthorizeRequest loginRequest)
+        {
+
+            User? user = null;
+
+            try
             {
-                return BadRequest("This user still exists. Try new credentials.");
+                user = await UserService.Create().Authorize(loginRequest);
             }
+            catch(FailedLoginException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+            return Ok(user);
         }
     }
 }

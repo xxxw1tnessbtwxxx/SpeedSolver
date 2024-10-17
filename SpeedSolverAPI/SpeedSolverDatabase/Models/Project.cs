@@ -8,4 +8,5 @@ public class Project
     
     public virtual List<Objective>? Objectives { get; set; }
     public virtual List<ProjectModerator>? Moderators { get; set; }
+    public virtual List<InProjectMessage>? ChatHistory { get; set; }
 }

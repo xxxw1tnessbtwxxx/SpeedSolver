@@ -22,6 +22,33 @@ namespace SpeedSolverDatabase.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("SpeedSolverDatabase.Models.InProjectMessage", b =>
+                {
+                    b.Property<int>("MessageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("MessageId"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("ProjectId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("MessageId");
+
+                    b.HasIndex("ProjectId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("messages", (string)null);
+                });
+
             modelBuilder.Entity("SpeedSolverDatabase.Models.Invitation", b =>
                 {
                     b.Property<int>("InviteId")
@@ -234,6 +261,25 @@ namespace SpeedSolverDatabase.Migrations
                     b.ToTable("users", (string)null);
                 });
 
+            modelBuilder.Entity("SpeedSolverDatabase.Models.InProjectMessage", b =>
+                {
+                    b.HasOne("SpeedSolverDatabase.Models.Project", "Project")
+                        .WithMany("ChatHistory")
+                        .HasForeignKey("ProjectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("SpeedSolverDatabase.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Project");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("SpeedSolverDatabase.Models.Invitation", b =>
                 {
                     b.HasOne("SpeedSolverDatabase.Models.User", "InvitedByLeader")
@@ -345,6 +391,8 @@ namespace SpeedSolverDatabase.Migrations
 
             modelBuilder.Entity("SpeedSolverDatabase.Models.Project", b =>
                 {
+                    b.Navigation("ChatHistory");
+
                     b.Navigation("Moderators");
 
                     b.Navigation("Objectives");
