@@ -1,4 +1,4 @@
 import requests
-
-async def save_message(project: int, message: str, user_id: int):
-    pass
+from models.msg import Message
+async def save_message(msg: Message):
+    print(f"saving message: \nuser_id: {msg.user_id}\ncontent: {msg.content}")

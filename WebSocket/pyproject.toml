@@ -10,6 +10,7 @@ python = "^3.12"
 websockets = "^13.1"
 requests = "^2.32.3"
 asyncio = "^3.4.3"
+pydantic = "^2.9.2"
 
 
 [build-system]
