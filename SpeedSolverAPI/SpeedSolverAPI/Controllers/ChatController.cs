@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SpeedSolverAPI.DTO.Chat;
-using SpeedSolverDatabase.Models;
-using SpeedSolverDatabase.Services;
+using SpeedSolverDatabaseAccess.Services;
+using System.Formats.Asn1;
 
 
 namespace SpeedSolverAPI.Controllers
@@ -18,7 +18,14 @@ namespace SpeedSolverAPI.Controllers
             var chatService = ChatService.Create();
             var isComplete = await chatService.InsertMessage(messageModel);
             if (isComplete) return Ok();
-            return BadRequest();
+            return BadRequest("fail");
+        }
+
+        [HttpGet("getMessageHistory")]
+        public async Task<IActionResult> GetMessageHistory(int projectId)
+        {
+            ChatService chatService = ChatService.Create();
+            return Ok(await chatService.GetMessageHistory(projectId));
         }
 
     }

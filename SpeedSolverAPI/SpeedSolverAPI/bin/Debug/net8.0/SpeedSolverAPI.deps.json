@@ -13,7 +13,7 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.6",
           "Newtonsoft.Json": "13.0.3",
           "SpeedSolverCore": "1.0.0",
-          "SpeedSolverDatabase": "1.0.0",
+          "SpeedSolverDatabaseAccess": "1.0.0",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
         "runtime": {
@@ -1700,6 +1700,14 @@
         "runtime": {
           "SpeedSolverDatabase.dll": {}
         }
+      },
+      "SpeedSolverDatabaseAccess/1.0.0": {
+        "dependencies": {
+          "SpeedSolverDatabase": "1.0.0"
+        },
+        "runtime": {
+          "SpeedSolverDatabaseAccess.dll": {}
+        }
       }
     }
   },
@@ -2681,6 +2689,11 @@
       "sha512": ""
     },
     "SpeedSolverDatabase/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SpeedSolverDatabaseAccess/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

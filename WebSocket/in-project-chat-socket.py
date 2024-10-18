@@ -22,8 +22,7 @@ async def handler(connection, path):
         async for json_msg in connection:
             data = json.loads(json_msg)
             
-            await save_message(Message (
-                prooject_id=current_project,
+            await save_message(current_project, Message (
                 content=data['content'],
                 user_id=int(data['user_id'])
             ))

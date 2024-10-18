@@ -37,6 +37,9 @@ namespace SpeedSolverDatabase.Migrations
                     b.Property<int>("ProjectId")
                         .HasColumnType("integer");
 
+                    b.Property<DateTime>("SendedAt")
+                        .HasColumnType("timestamp without time zone");
+
                     b.Property<int>("UserId")
                         .HasColumnType("integer");
 
@@ -119,7 +122,12 @@ namespace SpeedSolverDatabase.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("character varying(50)");
 
+                    b.Property<int>("TeamId")
+                        .HasColumnType("integer");
+
                     b.HasKey("ProjectId");
+
+                    b.HasIndex("TeamId");
 
                     b.ToTable("projects", (string)null);
                 });
@@ -161,7 +169,7 @@ namespace SpeedSolverDatabase.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("TeamId"));
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<int>("CreatorId")
                         .HasColumnType("integer");
@@ -324,6 +332,17 @@ namespace SpeedSolverDatabase.Migrations
                     b.Navigation("Project");
                 });
 
+            modelBuilder.Entity("SpeedSolverDatabase.Models.Project", b =>
+                {
+                    b.HasOne("SpeedSolverDatabase.Models.Team", "Team")
+                        .WithMany("Projects")
+                        .HasForeignKey("TeamId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Team");
+                });
+
             modelBuilder.Entity("SpeedSolverDatabase.Models.ProjectModerator", b =>
                 {
                     b.HasOne("SpeedSolverDatabase.Models.Project", "Project")
@@ -401,6 +420,8 @@ namespace SpeedSolverDatabase.Migrations
             modelBuilder.Entity("SpeedSolverDatabase.Models.Team", b =>
                 {
                     b.Navigation("Objectives");
+
+                    b.Navigation("Projects");
                 });
 
             modelBuilder.Entity("SpeedSolverDatabase.Models.TeamObjective", b =>

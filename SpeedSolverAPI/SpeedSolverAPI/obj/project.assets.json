@@ -2378,6 +2378,19 @@
         "runtime": {
           "bin/placeholder/SpeedSolverDatabase.dll": {}
         }
+      },
+      "SpeedSolverDatabaseAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "SpeedSolverDatabase": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SpeedSolverDatabaseAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SpeedSolverDatabaseAccess.dll": {}
+        }
       }
     }
   },
@@ -6777,6 +6790,11 @@
       "type": "project",
       "path": "../SpeedSolverDatabase/SpeedSolverDatabase.csproj",
       "msbuildProject": "../SpeedSolverDatabase/SpeedSolverDatabase.csproj"
+    },
+    "SpeedSolverDatabaseAccess/1.0.0": {
+      "type": "project",
+      "path": "../SpeedSolverDatabaseAccess/SpeedSolverDatabaseAccess.csproj",
+      "msbuildProject": "../SpeedSolverDatabaseAccess/SpeedSolverDatabaseAccess.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6786,40 +6804,43 @@
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.6",
       "Newtonsoft.Json >= 13.0.3",
       "SpeedSolverCore >= 1.0.0",
-      "SpeedSolverDatabase >= 1.0.0",
+      "SpeedSolverDatabaseAccess >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
   "packageFolders": {
-    "/Users/w1tnessbtwwww/.nuget/packages/": {}
+    "C:\\Users\\study\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverAPI/SpeedSolverAPI.csproj",
+      "projectUniqueName": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverAPI\\SpeedSolverAPI.csproj",
       "projectName": "SpeedSolverAPI",
-      "projectPath": "/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverAPI/SpeedSolverAPI.csproj",
-      "packagesPath": "/Users/w1tnessbtwwww/.nuget/packages/",
-      "outputPath": "/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverAPI/obj/",
+      "projectPath": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverAPI\\SpeedSolverAPI.csproj",
+      "packagesPath": "C:\\Users\\study\\.nuget\\packages\\",
+      "outputPath": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/w1tnessbtwwww/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\study\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverCore/SpeedSolverCore.csproj": {
-              "projectPath": "/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverCore/SpeedSolverCore.csproj"
+            "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverCore\\SpeedSolverCore.csproj": {
+              "projectPath": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverCore\\SpeedSolverCore.csproj"
             },
-            "/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverDatabase/SpeedSolverDatabase.csproj": {
-              "projectPath": "/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverDatabase/SpeedSolverDatabase.csproj"
+            "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverDatabaseAccess\\SpeedSolverDatabaseAccess.csproj": {
+              "projectPath": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverDatabaseAccess\\SpeedSolverDatabaseAccess.csproj"
             }
           }
         }
@@ -6881,7 +6902,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

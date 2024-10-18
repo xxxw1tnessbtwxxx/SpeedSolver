@@ -22,7 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SpeedSolverCore\SpeedSolverCore.csproj" />
-    <ProjectReference Include="..\SpeedSolverDatabase\SpeedSolverDatabase.csproj" />
+    <ProjectReference Include="..\SpeedSolverDatabaseAccess\SpeedSolverDatabaseAccess.csproj" />
   </ItemGroup>
 
 </Project>

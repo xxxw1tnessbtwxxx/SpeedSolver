@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "serverchat"
+name = "chatserver"
 version = "0.1.0"
 description = ""
 authors = ["xxxw1tnessbtwxxx <work.w1tnessbtw@mail.ru>"]
@@ -8,9 +8,9 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 websockets = "^13.1"
+pydantic = "^2.9.2"
 requests = "^2.32.3"
 asyncio = "^3.4.3"
-pydantic = "^2.9.2"
 
 
 [build-system]

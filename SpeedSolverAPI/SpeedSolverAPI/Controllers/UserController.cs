@@ -1,12 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi.Any;
 using SpeedSolverCore;
-using SpeedSolverDatabase;
 using SpeedSolverDatabase.Models;
-using SpeedSolverDatabase.Repo;
 using SpeedSolverDatabase.Repo.Exceptions;
-using SpeedSolverDatabase.Services;
-using SpeedSolverDatabase.Services.abc;
+using SpeedSolverDatabaseAccess.Services;
 
 namespace SpeedSolverAPI.Controllers
 {

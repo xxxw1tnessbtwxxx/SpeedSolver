@@ -16,7 +16,12 @@ public class ProjectConfiguration: IEntityTypeConfiguration<Project>
         
         builder.Property(p => p.ProjectDescription)
             .HasMaxLength(300);
-        
+
+
+        builder.HasOne(p => p.Team)
+            .WithMany(t => t.Projects)
+            .HasForeignKey(p => p.TeamId)
+            .OnDelete(DeleteBehavior.Cascade);
         
     }
 }

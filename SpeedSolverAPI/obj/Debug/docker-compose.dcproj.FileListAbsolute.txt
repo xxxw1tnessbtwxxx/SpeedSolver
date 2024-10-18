@@ -1,1 +1,0 @@
-D:\Development\SpeedSolver\SpeedSolverAPI\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
