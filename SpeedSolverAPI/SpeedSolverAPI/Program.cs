@@ -23,7 +23,7 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddDbContext<SpeedContext>(options =>
 {
-    options.UseNpgsql(builder.Configuration.GetConnectionString("Database"));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DeployDatabase"));
 });
 var app = builder.Build();
 

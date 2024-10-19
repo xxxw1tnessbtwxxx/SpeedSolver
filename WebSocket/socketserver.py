@@ -22,10 +22,10 @@ async def handler(connection, path):
         async for json_msg in connection:
             data = json.loads(json_msg)
             
-            await save_message(current_project, Message (
-                content=data['content'],
-                user_id=int(data['user_id'])
-            ))
+            # await save_message(current_project, Message (
+            #     content=data['content'],
+            #     user_id=int(data['user_id'])
+            # ))
 
             for client in connected_users[current_project]:
                     if client != connection:
@@ -38,8 +38,10 @@ async def handler(connection, path):
 
 
 port: Final = 8765
-start_server = websockets.serve(handler, "localhost", port)
+async def main():
+    start_server = websockets.serve(handler, "0.0.0.0", port)
+    await start_server
+    await asyncio.Future()  # Бесконечный цикл для поддержания работы сервера
 
-asyncio.get_event_loop().run_until_complete(start_server)
-print(f"Server listening {port}")
-asyncio.get_event_loop().run_forever()
+if __name__ == "__main__":
+    asyncio.run(main())

@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpeedSolverDatabase", "Spee
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpeedSolverCore", "SpeedSolverCore\SpeedSolverCore.csproj", "{71775368-1018-4DAF-A5D0-85F10F233071}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeedSolverDatabaseAccess", "SpeedSolverDatabaseAccess\SpeedSolverDatabaseAccess.csproj", "{9F425D52-CDA8-4595-A2EB-F8E4007731FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpeedSolverDatabaseAccess", "SpeedSolverDatabaseAccess\SpeedSolverDatabaseAccess.csproj", "{9F425D52-CDA8-4595-A2EB-F8E4007731FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

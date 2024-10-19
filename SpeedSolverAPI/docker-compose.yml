@@ -1,0 +1,49 @@
+version: '3.4'
+
+services:
+  speedsolver.database:
+    image: postgres:latest
+    container_name: "speedsolver.database"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=555
+      - POSTGRES_DB=speedsolver
+    ports:
+      - "5400:5432"
+    volumes:
+      - /var/lib/postgresql/data
+
+  speedsolverapi:
+    image: speedsolverapi
+    build:
+      context: .
+      dockerfile: SpeedSolverAPI/Dockerfile
+    ports:
+    - "5000:5000"
+    - "5001:5001"
+
+    depends_on:
+      - speedsolver.database
+
+  websocket:
+    container_name: "python.websocket"
+    build: ../WebSocket
+    command: poetry run python socketserver.py
+    environment:
+      - POETRY_VIRTUALENVS_CREATE=false
+    volumes:
+      - /app/websocket
+    ports:
+      - "8765:8765"
+    depends_on:
+      - speedsolverapi
+
+  cacher-redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - /cacher/data/redisdata
+
+
