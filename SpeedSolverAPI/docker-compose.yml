@@ -9,7 +9,7 @@ services:
       - POSTGRES_PASSWORD=555
       - POSTGRES_DB=speedsolver
     ports:
-      - "5400:5432"
+      - "5400:5433"
     volumes:
       - /var/lib/postgresql/data
 
@@ -19,8 +19,8 @@ services:
       context: .
       dockerfile: SpeedSolverAPI/Dockerfile
     ports:
-    - "5000:5000"
-    - "5001:5001"
+    - "5005:5005"
+    - "5006:5006"
 
     depends_on:
       - speedsolver.database
