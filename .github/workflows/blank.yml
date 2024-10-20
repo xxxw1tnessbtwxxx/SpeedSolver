@@ -10,6 +10,7 @@ jobs:
 
       - name: Build Docker Compose
         run: |
+          pwd
           docker-compose -f ../SpeedSolverAPI/docker-compose.yml build
       # Этот шаг собирает Docker Compose проект.
 
