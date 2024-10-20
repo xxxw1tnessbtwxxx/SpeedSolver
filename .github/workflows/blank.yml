@@ -1,0 +1,19 @@
+name: project-deployer
+on: push
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: cloning repo
+        uses: actions/checkout@v4
+
+      - name: Build Docker Compose
+        run: |
+          docker-compose -f docker-compose.yml build
+      # Этот шаг собирает Docker Compose проект.
+
+      - name: Run Docker Compose
+        run: |
+          docker-compose -f docker-compose.yml up -d
+      # Этот шаг запускает Docker Compose в фоновом режиме.
