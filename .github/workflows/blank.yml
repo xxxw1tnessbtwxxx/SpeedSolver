@@ -10,11 +10,11 @@ jobs:
 
       - name: Build Docker Compose
         run: |
-          pwd
-          docker-compose -f ../SpeedSolverAPI/docker-compose.yml build
+          cd SpeedSolverAPI/
+          docker-compose -f docker-compose.yml build
       # Этот шаг собирает Docker Compose проект.
 
       - name: Run Docker Compose
         run: |
-          docker-compose -f ../SpeedSolverAPI/docker-compose.yml up -d
+          docker-compose -f docker-compose.yml up -d
       # Этот шаг запускает Docker Compose в фоновом режиме.
