@@ -35,5 +35,6 @@ namespace SpeedSolverAPI.Controllers
             return Ok(await chatService.GetMessageHistory(projectId));
         }
 
+
     }
 }
