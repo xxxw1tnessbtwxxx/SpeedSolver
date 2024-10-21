@@ -35,5 +35,12 @@ namespace SpeedSolverAPI.Controllers
             return Ok(200);
         }
 
+        [HttpGet("lalalala")]
+        public async Task<IActionResult> ALalalala()
+        {
+            // asdasdasd
+            return Ok(200);
+        }
+
     }
 }
