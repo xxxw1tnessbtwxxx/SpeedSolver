@@ -28,5 +28,8 @@ namespace SpeedSolverAPI.Controllers
             return Ok(await chatService.GetMessageHistory(projectId));
         }
 
+        [HttpGet("prikolchik")]
+        public async Task<IActionResult> Prikol() => Ok("смешно да");
+
     }
 }
