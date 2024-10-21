@@ -28,18 +28,11 @@ namespace SpeedSolverAPI.Controllers
             return Ok(await chatService.GetMessageHistory(projectId));
         }
 
-        [HttpGet("prikolchik")]
-        public async Task<IActionResult> Prikolyamba()
+        [HttpGet("testestset")]
+        public async Task<IActionResult> test(int projectId)
         {
-            // asdasdasd
-            return Ok(200);
-        }
-
-        [HttpGet("lalalala")]
-        public async Task<IActionResult> ALalalala()
-        {
-            // asdasdasd
-            return Ok(200);
+            ChatService chatService = ChatService.Create();
+            return Ok(await chatService.GetMessageHistory(projectId));
         }
 
     }
