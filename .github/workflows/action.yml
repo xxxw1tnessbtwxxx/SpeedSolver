@@ -14,3 +14,4 @@ jobs:
           docker-compose up --build
       # Этот шаг запускает Docker Compose в фоновом режиме.
       # fdasf
+      #trying forever
