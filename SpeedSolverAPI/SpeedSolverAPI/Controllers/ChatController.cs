@@ -29,7 +29,10 @@ namespace SpeedSolverAPI.Controllers
         }
 
         [HttpGet("prikolchik")]
-        public async Task<IActionResult> Prikol() => Ok("смешно дasdasdа");
+        public async Task<IActionResult> Prikolyamba()
+        {
+            return Ok(200);
+        }
 
     }
 }
