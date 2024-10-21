@@ -1,0 +1,16 @@
+name: project-deployer
+on: push
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: cloning repo
+        uses: actions/checkout@v4
+
+      - name: run compose
+        run: |
+          cd SpeedSolverAPI/
+          docker-compose up --build
+      # Этот шаг запускает Docker Compose в фоновом режиме.
+      # fdasf
