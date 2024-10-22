@@ -19,12 +19,9 @@ namespace SpeedSolverAPI.Controllers
                 .Create()
                 .Register(registerRequest);
 
-            if (registeredUser != null)
-            {
-                return Ok(registeredUser.UserId);
-            }
+            if (registeredUser.IsFailure) return BadRequest(registeredUser.Error);
 
-            return BadRequest("This user still exists. Try new credentials.");
+            return Ok(registeredUser.Value);
 
         }
 

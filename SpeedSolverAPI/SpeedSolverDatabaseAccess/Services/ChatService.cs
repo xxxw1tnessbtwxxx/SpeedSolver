@@ -46,24 +46,5 @@ namespace SpeedSolverDatabaseAccess.Services
             return result;
         }
 
-        public async Task<bool> InsertMessage(ProjectMessageCreateDto msg)
-        {
-            try
-            {
-                var inserted = _repository.Insert(new InProjectMessage
-                {
-                    UserId = msg.UserId,
-                    Content = msg.Content,
-                    ProjectId = msg.ProjectId,
-                });
-                return inserted;
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return false;
-            }
-        }
-
     }
 }

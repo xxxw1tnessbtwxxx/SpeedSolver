@@ -22,3 +22,4 @@ D:\Development\SpeedSolver\SpeedSolverAPI\SpeedSolverCore\obj\Debug\net8.0\Speed
 D:\Development\SpeedSolver\SpeedSolverAPI\SpeedSolverCore\obj\Debug\net8.0\refint\SpeedSolverCore.dll
 D:\Development\SpeedSolver\SpeedSolverAPI\SpeedSolverCore\obj\Debug\net8.0\SpeedSolverCore.pdb
 D:\Development\SpeedSolver\SpeedSolverAPI\SpeedSolverCore\obj\Debug\net8.0\ref\SpeedSolverCore.dll
+D:\Development\speedsolver\SpeedSolverAPI\SpeedSolverCore\obj\Debug\net8.0\SpeedSolverCore.csproj.AssemblyReference.cache

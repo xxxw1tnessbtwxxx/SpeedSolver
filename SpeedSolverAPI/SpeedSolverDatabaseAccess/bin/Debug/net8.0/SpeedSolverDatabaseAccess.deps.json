@@ -8,10 +8,19 @@
     ".NETCoreApp,Version=v8.0": {
       "SpeedSolverDatabaseAccess/1.0.0": {
         "dependencies": {
+          "CSharpFunctionalExtensions": "3.1.0",
           "SpeedSolverDatabase": "1.0.0"
         },
         "runtime": {
           "SpeedSolverDatabaseAccess.dll": {}
+        }
+      },
+      "CSharpFunctionalExtensions/3.1.0": {
+        "runtime": {
+          "lib/net8.0/CSharpFunctionalExtensions.dll": {
+            "assemblyVersion": "3.1.0.0",
+            "fileVersion": "3.1.0.0"
+          }
         }
       },
       "Microsoft.EntityFrameworkCore/8.0.8": {
@@ -175,12 +184,16 @@
         }
       },
       "SpeedSolverCore/1.0.0": {
+        "dependencies": {
+          "CSharpFunctionalExtensions": "3.1.0"
+        },
         "runtime": {
           "SpeedSolverCore.dll": {}
         }
       },
       "SpeedSolverDatabase/1.0.0": {
         "dependencies": {
+          "CSharpFunctionalExtensions": "3.1.0",
           "Microsoft.EntityFrameworkCore": "8.0.8",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.8",
           "SpeedSolverCore": "1.0.0"
@@ -196,6 +209,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "CSharpFunctionalExtensions/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cLVWFoYqn7xI7LVAIgnxr1CNCPFjqM8Q5ya8pbYST1ZdDg6SZxEoyQx8tpe5hkib0+cVyruv82IUiKk3fMEG7w==",
+      "path": "csharpfunctionalextensions/3.1.0",
+      "hashPath": "csharpfunctionalextensions.3.1.0.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore/8.0.8": {
       "type": "package",

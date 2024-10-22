@@ -15,10 +15,7 @@ namespace SpeedSolverAPI.Controllers
         [HttpPost("postMessage")]
         public async Task<IActionResult> PostMessage(ProjectMessageCreateDto messageModel)
         {
-            var chatService = ChatService.Create();
-            var isComplete = await chatService.InsertMessage(messageModel);
-            if (isComplete) return Ok();
-            return BadRequest("fail");
+            return NotFound();
         }
 
         [HttpGet("getMessageHistory")]

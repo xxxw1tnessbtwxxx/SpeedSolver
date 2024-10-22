@@ -1,4 +1,5 @@
-﻿using SpeedSolverDatabase.Models;
+﻿using CSharpFunctionalExtensions;
+using SpeedSolverDatabase.Models;
 using SpeedSolverDatabaseAccess.Repo.abc;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace SpeedSolverDatabaseAccess.Repo
 {
     public class ChatRepository : AbcAccessProvider, IRepository<InProjectMessage>
     {
-        public void Delete(InProjectMessage entity)
+        public bool Delete(InProjectMessage entity)
         {
             throw new NotImplementedException();
         }
@@ -23,7 +24,7 @@ namespace SpeedSolverDatabaseAccess.Repo
 
         public IQueryable<InProjectMessage> Filtered(Expression<Func<InProjectMessage, bool>> expression)
         {
-            return _context.InProjectMessages.Where(expression);
+            throw new NotImplementedException();
         }
 
         public List<InProjectMessage> GetAll()
@@ -36,27 +37,14 @@ namespace SpeedSolverDatabaseAccess.Repo
             throw new NotImplementedException();
         }
 
-        public bool Insert(InProjectMessage entity)
-        {
-            try
-            {
-                _context.InProjectMessages.Add(entity);
-                _context.SaveChanges();
-                Console.WriteLine("really added");
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-            
-        }
-
-        public void Update(InProjectMessage entity)
+        public Result<InProjectMessage> Insert(InProjectMessage entity)
         {
             throw new NotImplementedException();
         }
 
-       
+        public Result<InProjectMessage> Update(InProjectMessage entity)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
