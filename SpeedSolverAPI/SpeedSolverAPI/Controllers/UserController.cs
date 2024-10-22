@@ -21,7 +21,7 @@ namespace SpeedSolverAPI.Controllers
 
             if (registeredUser.IsFailure) return BadRequest(registeredUser.Error);
 
-            return Ok(registeredUser.Value);
+            return Ok(registeredUser.Value.UserId);
 
         }
 
