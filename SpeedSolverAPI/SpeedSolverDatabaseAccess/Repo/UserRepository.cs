@@ -1,4 +1,5 @@
-﻿using SpeedSolverDatabase.Models;
+﻿using CSharpFunctionalExtensions;
+using SpeedSolverDatabase.Models;
 using SpeedSolverDatabaseAccess.Repo.abc;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace SpeedSolverDatabaseAccess.Repo
 {
     public class UserRepository() : AbcAccessProvider, IRepository<User>
     {
-        public void Delete(User entity)
+        public bool Delete(User entity)
         {
             throw new NotImplementedException();
         }
@@ -36,7 +37,7 @@ namespace SpeedSolverDatabaseAccess.Repo
             return _context.Users.Where(expression);
         }
 
-        public bool Insert(User entity)
+        public Result<User> Insert(User entity)
         {
             var user = _context.Users.Where(x => x.Login == entity.Login).FirstOrDefault();
             if (user is null)
@@ -49,7 +50,7 @@ namespace SpeedSolverDatabaseAccess.Repo
             return false;
         }
 
-        public void Update(User entity)
+        public Result<User> Update(User entity)
         {
             throw new NotImplementedException();
         }

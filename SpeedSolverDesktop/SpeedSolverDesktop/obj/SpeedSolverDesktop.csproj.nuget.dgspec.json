@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Development\\speedsolver\\SpeedSolverDesktop\\SpeedSolverDesktop\\SpeedSolverDesktop.csproj": {}
+    "D:\\Development\\SpeedSolver\\SpeedSolverDesktop\\SpeedSolverDesktop\\SpeedSolverDesktop.csproj": {}
   },
   "projects": {
-    "D:\\Development\\speedsolver\\SpeedSolverDesktop\\SpeedSolverDesktop\\SpeedSolverDesktop.csproj": {
+    "D:\\Development\\SpeedSolver\\SpeedSolverDesktop\\SpeedSolverDesktop\\SpeedSolverDesktop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development\\speedsolver\\SpeedSolverDesktop\\SpeedSolverDesktop\\SpeedSolverDesktop.csproj",
+        "projectUniqueName": "D:\\Development\\SpeedSolver\\SpeedSolverDesktop\\SpeedSolverDesktop\\SpeedSolverDesktop.csproj",
         "projectName": "SpeedSolverDesktop",
-        "projectPath": "D:\\Development\\speedsolver\\SpeedSolverDesktop\\SpeedSolverDesktop\\SpeedSolverDesktop.csproj",
+        "projectPath": "D:\\Development\\SpeedSolver\\SpeedSolverDesktop\\SpeedSolverDesktop\\SpeedSolverDesktop.csproj",
         "packagesPath": "C:\\Users\\study\\.nuget\\packages\\",
-        "outputPath": "D:\\Development\\speedsolver\\SpeedSolverDesktop\\SpeedSolverDesktop\\obj\\",
+        "outputPath": "D:\\Development\\SpeedSolver\\SpeedSolverDesktop\\SpeedSolverDesktop\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\study\\AppData\\Roaming\\NuGet\\NuGet.Config",

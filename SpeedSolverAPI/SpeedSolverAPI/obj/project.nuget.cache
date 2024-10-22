@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ym4cVHC8ubc=",
+  "dgSpecHash": "M1wpDiyVbFQ=",
   "success": true,
   "projectFilePath": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverAPI\\SpeedSolverAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\study\\.nuget\\packages\\csharpfunctionalextensions\\3.1.0\\csharpfunctionalextensions.3.1.0.nupkg.sha512",
     "C:\\Users\\study\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\study\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\study\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",

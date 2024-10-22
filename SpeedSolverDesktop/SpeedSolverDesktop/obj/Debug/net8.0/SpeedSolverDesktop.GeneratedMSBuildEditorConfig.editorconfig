@@ -13,12 +13,12 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SpeedSolverDesktop
-build_property.ProjectDir = D:\Development\speedsolver\SpeedSolverDesktop\SpeedSolverDesktop\
+build_property.ProjectDir = D:\Development\SpeedSolver\SpeedSolverDesktop\SpeedSolverDesktop\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[D:/Development/speedsolver/SpeedSolverDesktop/SpeedSolverDesktop/App.axaml]
+[D:/Development/SpeedSolver/SpeedSolverDesktop/SpeedSolverDesktop/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/Development/speedsolver/SpeedSolverDesktop/SpeedSolverDesktop/MainWindow.axaml]
+[D:/Development/SpeedSolver/SpeedSolverDesktop/SpeedSolverDesktop/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
