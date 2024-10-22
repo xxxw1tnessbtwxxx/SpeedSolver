@@ -29,10 +29,10 @@ namespace SpeedSolverDatabaseAccess.Services
         public async Task<Result<User?>> Register(RegisterRequest registerRequest)
         {
             string password = Crypto.HashPassword(registerRequest.Password);
-            var user = User.Create(registerRequest.Login, registerRequest.Password);
-            if (user.IsFailure)
+            var insert = this._repository.Insert(User.Create(registerRequest.Login, registerRequest.Password).Value);
+            if (insert.IsFailure)
             {
-                return Result.Failure<User?>(user.Error);
+                return Result.Failure<User?>(insert.Error);
             }
 
             var userFromDb = this._repository.Filtered(x => x.Login == registerRequest.Login && x.Password == password).FirstOrDefault();
