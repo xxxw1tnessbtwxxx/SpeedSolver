@@ -1,4 +1,5 @@
 ﻿using CSharpFunctionalExtensions;
+using Microsoft.EntityFrameworkCore;
 using SpeedSolverDatabase.Models;
 using SpeedSolverDatabaseAccess.Repo.abc;
 using System;
@@ -40,8 +41,10 @@ namespace SpeedSolverDatabaseAccess.Repo
 
         public Result<UserEntity> Insert(UserEntity entity)
         {
-            bool exists = _context.Users.Where(x => x.Login == entity.Login).FirstOrDefault() is null;
-            if (!exists)
+            bool exists = _context.Users.Where(x => x.Login == entity.Login)
+                .AsNoTracking()
+                .FirstOrDefault() is null;
+            if (exists)
             {
                 _context.Users.Add(entity);
                 _context.SaveChanges();

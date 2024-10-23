@@ -9,6 +9,7 @@
       "SpeedSolverDatabaseAccess/1.0.0": {
         "dependencies": {
           "CSharpFunctionalExtensions": "3.1.0",
+          "SpeedSolverCore": "1.0.0",
           "SpeedSolverDatabase": "1.0.0"
         },
         "runtime": {
@@ -185,7 +186,8 @@
       },
       "SpeedSolverCore/1.0.0": {
         "dependencies": {
-          "CSharpFunctionalExtensions": "3.1.0"
+          "CSharpFunctionalExtensions": "3.1.0",
+          "SpeedSolverDatabase": "1.0.0"
         },
         "runtime": {
           "SpeedSolverCore.dll": {}
@@ -195,8 +197,7 @@
         "dependencies": {
           "CSharpFunctionalExtensions": "3.1.0",
           "Microsoft.EntityFrameworkCore": "8.0.8",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.8",
-          "SpeedSolverCore": "1.0.0"
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.8"
         },
         "runtime": {
           "SpeedSolverDatabase.dll": {}

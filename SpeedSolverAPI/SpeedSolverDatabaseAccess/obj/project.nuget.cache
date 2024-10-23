@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "emvVnBCVzTQ=",
+  "dgSpecHash": "4vBIqHOJTDg=",
   "success": true,
-  "projectFilePath": "D:\\Development\\SpeedSolver\\SpeedSolverAPI\\SpeedSolverDatabaseAccess\\SpeedSolverDatabaseAccess.csproj",
+  "projectFilePath": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverDatabaseAccess\\SpeedSolverDatabaseAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\study\\.nuget\\packages\\csharpfunctionalextensions\\3.1.0\\csharpfunctionalextensions.3.1.0.nupkg.sha512",
     "C:\\Users\\study\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.8\\microsoft.entityframeworkcore.8.0.8.nupkg.sha512",

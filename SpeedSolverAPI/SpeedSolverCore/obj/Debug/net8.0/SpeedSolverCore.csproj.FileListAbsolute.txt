@@ -23,3 +23,6 @@ D:\Development\SpeedSolver\SpeedSolverAPI\SpeedSolverCore\obj\Debug\net8.0\refin
 D:\Development\SpeedSolver\SpeedSolverAPI\SpeedSolverCore\obj\Debug\net8.0\SpeedSolverCore.pdb
 D:\Development\SpeedSolver\SpeedSolverAPI\SpeedSolverCore\obj\Debug\net8.0\ref\SpeedSolverCore.dll
 D:\Development\speedsolver\SpeedSolverAPI\SpeedSolverCore\obj\Debug\net8.0\SpeedSolverCore.csproj.AssemblyReference.cache
+D:\Development\speedsolver\SpeedSolverAPI\SpeedSolverCore\bin\Debug\net8.0\SpeedSolverDatabase.dll
+D:\Development\speedsolver\SpeedSolverAPI\SpeedSolverCore\bin\Debug\net8.0\SpeedSolverDatabase.pdb
+D:\Development\speedsolver\SpeedSolverAPI\SpeedSolverCore\obj\Debug\net8.0\SpeedSol.E6B2E1A8.Up2Date

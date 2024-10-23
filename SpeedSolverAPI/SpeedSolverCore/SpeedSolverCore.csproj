@@ -10,4 +10,8 @@
       <PackageReference Include="CSharpFunctionalExtensions" Version="3.1.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\SpeedSolverDatabase\SpeedSolverDatabase.csproj" />
+    </ItemGroup>
+
 </Project>

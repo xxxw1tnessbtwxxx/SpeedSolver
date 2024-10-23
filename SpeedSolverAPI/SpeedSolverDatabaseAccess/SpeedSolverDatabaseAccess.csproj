@@ -7,11 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SpeedSolverDatabase\SpeedSolverDatabase.csproj" />
+    <PackageReference Include="CSharpFunctionalExtensions" Version="3.1.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CSharpFunctionalExtensions" Version="3.1.0" />
+    <ProjectReference Include="..\SpeedSolverCore\SpeedSolverCore.csproj" />
+    <ProjectReference Include="..\SpeedSolverDatabase\SpeedSolverDatabase.csproj" />
   </ItemGroup>
 
 </Project>

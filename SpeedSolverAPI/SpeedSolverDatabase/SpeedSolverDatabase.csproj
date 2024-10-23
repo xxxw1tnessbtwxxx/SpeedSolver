@@ -20,8 +20,4 @@
     <Folder Include="Migrations\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\SpeedSolverCore\SpeedSolverCore.csproj" />
-  </ItemGroup>
-
 </Project>

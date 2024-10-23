@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FYnuv4Er0FM=",
+  "dgSpecHash": "J2TbS5laNnY=",
   "success": true,
-  "projectFilePath": "D:\\Development\\SpeedSolver\\SpeedSolverAPI\\SpeedSolverDatabase\\SpeedSolverDatabase.csproj",
+  "projectFilePath": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverDatabase\\SpeedSolverDatabase.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\study\\.nuget\\packages\\csharpfunctionalextensions\\3.1.0\\csharpfunctionalextensions.3.1.0.nupkg.sha512",
     "C:\\Users\\study\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

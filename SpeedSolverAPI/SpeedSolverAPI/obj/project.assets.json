@@ -2371,7 +2371,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "CSharpFunctionalExtensions": "3.1.0"
+          "CSharpFunctionalExtensions": "3.1.0",
+          "SpeedSolverDatabase": "1.0.0"
         },
         "compile": {
           "bin/placeholder/SpeedSolverCore.dll": {}
@@ -2386,8 +2387,7 @@
         "dependencies": {
           "CSharpFunctionalExtensions": "3.1.0",
           "Microsoft.EntityFrameworkCore": "8.0.8",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.8",
-          "SpeedSolverCore": "1.0.0"
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.8"
         },
         "compile": {
           "bin/placeholder/SpeedSolverDatabase.dll": {}
@@ -2401,6 +2401,7 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "CSharpFunctionalExtensions": "3.1.0",
+          "SpeedSolverCore": "1.0.0",
           "SpeedSolverDatabase": "1.0.0"
         },
         "compile": {
@@ -6852,11 +6853,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Development\\SpeedSolver\\SpeedSolverAPI\\SpeedSolverAPI\\SpeedSolverAPI.csproj",
+      "projectUniqueName": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverAPI\\SpeedSolverAPI.csproj",
       "projectName": "SpeedSolverAPI",
-      "projectPath": "D:\\Development\\SpeedSolver\\SpeedSolverAPI\\SpeedSolverAPI\\SpeedSolverAPI.csproj",
+      "projectPath": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverAPI\\SpeedSolverAPI.csproj",
       "packagesPath": "C:\\Users\\study\\.nuget\\packages\\",
-      "outputPath": "D:\\Development\\SpeedSolver\\SpeedSolverAPI\\SpeedSolverAPI\\obj\\",
+      "outputPath": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\study\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6874,11 +6875,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Development\\SpeedSolver\\SpeedSolverAPI\\SpeedSolverCore\\SpeedSolverCore.csproj": {
-              "projectPath": "D:\\Development\\SpeedSolver\\SpeedSolverAPI\\SpeedSolverCore\\SpeedSolverCore.csproj"
+            "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverCore\\SpeedSolverCore.csproj": {
+              "projectPath": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverCore\\SpeedSolverCore.csproj"
             },
-            "D:\\Development\\SpeedSolver\\SpeedSolverAPI\\SpeedSolverDatabaseAccess\\SpeedSolverDatabaseAccess.csproj": {
-              "projectPath": "D:\\Development\\SpeedSolver\\SpeedSolverAPI\\SpeedSolverDatabaseAccess\\SpeedSolverDatabaseAccess.csproj"
+            "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverDatabaseAccess\\SpeedSolverDatabaseAccess.csproj": {
+              "projectPath": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverDatabaseAccess\\SpeedSolverDatabaseAccess.csproj"
             }
           }
         }
