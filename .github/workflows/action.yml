@@ -14,6 +14,3 @@ jobs:
           echo -------
           cd SpeedSolverAPI/
           docker-compose up -d --build
-      # Этот шаг запускает Docker Compose в фоновом режиме.
-      #trying forever
-      #dafg
