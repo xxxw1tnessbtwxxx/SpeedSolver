@@ -17,15 +17,15 @@ namespace SpeedSolverDatabase
 
         public bool IsConnected { get; set; } = false;
 
-        public DbSet<InProjectMessage> InProjectMessages { get; set; }
-        public DbSet<Invitation> Invitations { get; set; }
-        public DbSet<Objective> Objectives { get; set; }
-        public DbSet<Project> Projects { get; set; }
-        public DbSet<ProjectModerator> ProjectModerators { get; set; }
-        public DbSet<Team> Teams { get; set; }
-        public DbSet<TeamObjective> TeamObjectives { get; set; }
-        public DbSet<UnderObjective> UnderObjectives { get; set; }
-        public DbSet<User> Users { get; set; }
+        public DbSet<InProjectMessageEntity> InProjectMessages { get; set; }
+        public DbSet<InvitationEntity> Invitations { get; set; }
+        public DbSet<ObjectiveEntity> Objectives { get; set; }
+        public DbSet<ProjectEntity> Projects { get; set; }
+        public DbSet<ProjectModeratorEntity> ProjectModerators { get; set; }
+        public DbSet<TeamEntity> Teams { get; set; }
+        public DbSet<TeamObjectiveEntity> TeamObjectives { get; set; }
+        public DbSet<UnderObjectiveEntity> UnderObjectives { get; set; }
+        public DbSet<UserEntity> Users { get; set; }
 
 
         public SpeedContext(DbContextOptions options)
@@ -61,15 +61,15 @@ namespace SpeedSolverDatabase
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new InProjectMessagesConfiguration());
-            modelBuilder.ApplyConfiguration(new UnderObjectiveConfiguration());
-            modelBuilder.ApplyConfiguration(new TeamObjectiveConfiguration());
-            modelBuilder.ApplyConfiguration(new InvitationConfiguration());
-            modelBuilder.ApplyConfiguration(new ProjectModeratorConfiguration());
-            modelBuilder.ApplyConfiguration(new TeamConfiguration());
-            modelBuilder.ApplyConfiguration(new UserConfiguration());
-            modelBuilder.ApplyConfiguration(new ProjectConfiguration());
-            modelBuilder.ApplyConfiguration(new ObjectiveConfiguration());
+            modelBuilder.ApplyConfiguration(new InProjectMessagesEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new UnderEntityObjectiveConfiguration());
+            modelBuilder.ApplyConfiguration(new TeamEntityObjectiveConfiguration());
+            modelBuilder.ApplyConfiguration(new InvitationEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new ProjectEntityModeratorConfiguration());
+            modelBuilder.ApplyConfiguration(new TeamEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new UserEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new ProjectEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new ObjectiveEntityConfiguration());
             base.OnModelCreating(modelBuilder);
         }
 

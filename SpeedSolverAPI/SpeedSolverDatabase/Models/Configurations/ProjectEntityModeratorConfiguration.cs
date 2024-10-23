@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace SpeedSolverDatabase.Models.Configurations;
 
-public class ProjectModeratorConfiguration: IEntityTypeConfiguration<ProjectModerator>
+public class ProjectEntityModeratorConfiguration: IEntityTypeConfiguration<ProjectModeratorEntity>
 {
-    public void Configure(EntityTypeBuilder<ProjectModerator> builder)
+    public void Configure(EntityTypeBuilder<ProjectModeratorEntity> builder)
     {
         builder.ToTable("projectmoderators").HasKey(p => p.ProjectModId);
 

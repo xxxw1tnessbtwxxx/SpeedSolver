@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace SpeedSolverDatabase.Models.Configurations;
 
-public class InvitationConfiguration: IEntityTypeConfiguration<Invitation>
+public class InvitationEntityConfiguration: IEntityTypeConfiguration<InvitationEntity>
 {
-    public void Configure(EntityTypeBuilder<Invitation> builder)
+    public void Configure(EntityTypeBuilder<InvitationEntity> builder)
     {
         builder.ToTable("invitations").HasKey(i => i.InviteId);
 

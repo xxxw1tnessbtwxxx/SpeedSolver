@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SpeedSolverDatabase.Models
 {
-    public class InProjectMessage
+    public class InProjectMessageEntity
     {
         public int MessageId { get; set; }
         public string Content { get; set; }
@@ -15,7 +15,7 @@ namespace SpeedSolverDatabase.Models
         public int ProjectId { get; set; }
 
         public DateTime SendedAt { get; set; } = DateTime.Now;
-        public virtual Project? Project { get; set; }
-        public virtual User? User { get; set; }
+        public virtual ProjectEntity? Project { get; set; }
+        public virtual UserEntity? User { get; set; }
     }
 }

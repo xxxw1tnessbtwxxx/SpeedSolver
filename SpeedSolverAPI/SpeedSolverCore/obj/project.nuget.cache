@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "454egyWzaE0=",
+  "dgSpecHash": "Zabi1/IcctQ=",
   "success": true,
-  "projectFilePath": "/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverCore/SpeedSolverCore.csproj",
+  "projectFilePath": "D:\\Development\\SpeedSolver\\SpeedSolverAPI\\SpeedSolverCore\\SpeedSolverCore.csproj",
   "expectedPackageFiles": [
-    "/Users/w1tnessbtwwww/.nuget/packages/csharpfunctionalextensions/3.1.0/csharpfunctionalextensions.3.1.0.nupkg.sha512"
+    "C:\\Users\\study\\.nuget\\packages\\csharpfunctionalextensions\\3.1.0\\csharpfunctionalextensions.3.1.0.nupkg.sha512"
   ],
   "logs": []
 }

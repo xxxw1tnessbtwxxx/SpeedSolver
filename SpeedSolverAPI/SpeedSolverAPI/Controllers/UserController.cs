@@ -12,35 +12,20 @@ namespace SpeedSolverAPI.Controllers
     public class UserController : ControllerBase
     {
         [HttpPost("register")]
-        public async Task<IActionResult> Register(RegisterRequest registerRequest)
+        public async Task<IActionResult> Register([FromBody]RegisterRequest registerRequest)
         {
-            
-            var registeredUser = await UserService
+            var registerResult = await UserService
                 .Create()
                 .Register(registerRequest);
 
-            if (registeredUser.IsFailure) return BadRequest(registeredUser.Error);
-
-            return Ok(registeredUser.Value.UserId);
-
+            if (registerResult.IsSuccess) return Ok(registerResult.Value);
+            return BadRequest(registerResult.Error);
         }
 
         [HttpPost("authorize")]
         public async Task<IActionResult> Authorize(AuthorizeRequest loginRequest)
         {
-
-            User? user = null;
-
-            try
-            {
-                user = await UserService.Create().Authorize(loginRequest);
-            }
-            catch(FailedLoginException ex)
-            {
-                return BadRequest(ex.Message);
-            }
-
-            return Ok(user);
+            return NotFound();
         }
     }
 }

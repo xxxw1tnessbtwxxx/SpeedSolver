@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace SpeedSolverDatabaseAccess.Services
 {
-    public class ChatService: Service<InProjectMessage>
+    public class ChatService: Service<InProjectMessageEntity>
     {
 
         public static ChatService Create() => new ChatService();

@@ -11,9 +11,9 @@ using System.Threading.Tasks;
 
 namespace SpeedSolverDatabaseAccess.Repo
 {
-    public class UserRepository() : AbcAccessProvider, IRepository<User>
+    public class UserRepository() : AbcAccessProvider, IRepository<UserEntity>
     {
-        public bool Delete(User entity)
+        public bool Delete(UserEntity entity)
         {
             throw new NotImplementedException();
         }
@@ -23,35 +23,35 @@ namespace SpeedSolverDatabaseAccess.Repo
             throw new NotImplementedException();
         }
 
-        public List<User> GetAll()
+        public List<UserEntity> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public User GetById(int id)
+        public UserEntity GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public IQueryable<User> Filtered(Expression<Func<User, bool>> expression)
+        public IQueryable<UserEntity> Filtered(Expression<Func<UserEntity, bool>> expression)
         {
             return _context.Users.Where(expression);
         }
 
-        public Result<User> Insert(User entity)
+        public Result<UserEntity> Insert(UserEntity entity)
         {
-            var user = _context.Users.Where(x => x.Login == entity.Login).FirstOrDefault();
-            if (user is null)
+            bool exists = _context.Users.Where(x => x.Login == entity.Login).FirstOrDefault() is null;
+            if (!exists)
             {
                 _context.Users.Add(entity);
                 _context.SaveChanges();
-                return Result.Success<User>(entity);
+                return Result.Success<UserEntity>(entity);
             }
 
-            return Result.Failure<User>("The user is still exists");
+            return Result.Failure<UserEntity>("The user is still exists. Try new credentials");
         }
 
-        public Result<User> Update(User entity)
+        public Result<UserEntity> Update(UserEntity entity)
         {
             throw new NotImplementedException();
         }

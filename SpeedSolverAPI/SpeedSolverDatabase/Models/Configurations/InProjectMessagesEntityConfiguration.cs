@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace SpeedSolverDatabase.Models.Configurations;
 
-public class InProjectMessagesConfiguration : IEntityTypeConfiguration<InProjectMessage>
+public class InProjectMessagesEntityConfiguration : IEntityTypeConfiguration<InProjectMessageEntity>
 {
-    public void Configure(EntityTypeBuilder<InProjectMessage> builder)
+    public void Configure(EntityTypeBuilder<InProjectMessageEntity> builder)
     {
         builder.ToTable("messages").HasKey(p => p.MessageId);
 

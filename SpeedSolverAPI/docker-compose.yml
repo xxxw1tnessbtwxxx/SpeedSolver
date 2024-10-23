@@ -2,14 +2,14 @@ version: '3.4'
 
 services:
   speedsolver.database:
-    image: postgres:latest
+    image: postgres:16.4
     container_name: "speedsolver.database"
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=555
       - POSTGRES_DB=speedsolver
     ports:
-      - "5400:5433"
+      - "5555:5432"
     volumes:
       - /var/lib/postgresql/data
 

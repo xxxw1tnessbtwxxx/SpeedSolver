@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace SpeedSolverDatabaseAccess.Repo
 {
-    public class ChatRepository : AbcAccessProvider, IRepository<InProjectMessage>
+    public class ChatRepository : AbcAccessProvider, IRepository<InProjectMessageEntity>
     {
-        public bool Delete(InProjectMessage entity)
+        public bool Delete(InProjectMessageEntity entity)
         {
             throw new NotImplementedException();
         }
@@ -22,27 +22,27 @@ namespace SpeedSolverDatabaseAccess.Repo
             throw new NotImplementedException();
         }
 
-        public IQueryable<InProjectMessage> Filtered(Expression<Func<InProjectMessage, bool>> expression)
+        public IQueryable<InProjectMessageEntity> Filtered(Expression<Func<InProjectMessageEntity, bool>> expression)
         {
             throw new NotImplementedException();
         }
 
-        public List<InProjectMessage> GetAll()
+        public List<InProjectMessageEntity> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public InProjectMessage GetById(int id)
+        public InProjectMessageEntity GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Result<InProjectMessage> Insert(InProjectMessage entity)
+        public Result<InProjectMessageEntity> Insert(InProjectMessageEntity entity)
         {
             throw new NotImplementedException();
         }
 
-        public Result<InProjectMessage> Update(InProjectMessage entity)
+        public Result<InProjectMessageEntity> Update(InProjectMessageEntity entity)
         {
             throw new NotImplementedException();
         }

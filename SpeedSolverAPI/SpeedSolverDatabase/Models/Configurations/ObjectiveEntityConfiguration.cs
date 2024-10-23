@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace SpeedSolverDatabase.Models.Configurations;
 
-public class ObjectiveConfiguration: IEntityTypeConfiguration<Objective>
+public class ObjectiveEntityConfiguration: IEntityTypeConfiguration<ObjectiveEntity>
 {
-    public void Configure(EntityTypeBuilder<Objective> builder)
+    public void Configure(EntityTypeBuilder<ObjectiveEntity> builder)
     {
         builder.ToTable("objectives");
 

@@ -17,7 +17,7 @@ using SpeedSolverDatabaseAccess.Services.abc;
 
 namespace SpeedSolverDatabaseAccess.Services
 {
-    public class UserService: Service<User>
+    public class UserService: Service<UserEntity>
     {
 
         public static UserService Create() => new UserService();
@@ -26,33 +26,26 @@ namespace SpeedSolverDatabaseAccess.Services
             this._repository = new UserRepository();
         }
         
-        public async Task<Result<User?>> Register(RegisterRequest registerRequest)
+        public async Task<Result<UserEntity>> Register(RegisterRequest registerRequest)
         {
-            string password = Crypto.HashPassword(registerRequest.Password);
-            var insert = this._repository.Insert(User.Create(registerRequest.Login, registerRequest.Password).Value);
-            if (insert.IsFailure)
+            var insertingResult = _repository.Insert(new UserEntity
             {
-                return Result.Failure<User?>(insert.Error);
+                Login = registerRequest.Login,
+                Password = registerRequest.Password
+            });
+            
+            if (insertingResult.IsSuccess)
+            {
+                return Result.Success(insertingResult.Value);
             }
 
-            var userFromDb = this._repository.Filtered(x => x.Login == registerRequest.Login && x.Password == password).FirstOrDefault();
-            return Result.Success<User?>(userFromDb);
+            return Result.Failure<UserEntity>("This user still exists. Try again with new credentials");
+
         }
 
-        public async Task<User?> Authorize(AuthorizeRequest authorizeRequest)
+        public async Task<Result<UserEntity>> Authorize(AuthorizeRequest authorizeRequest)
         {
-            string password = Crypto.HashPassword(authorizeRequest.Password);
-            var user = this._repository
-                .Filtered(x => x.Login == authorizeRequest.Login && x.Password == password)
-                .AsNoTracking()
-                .FirstOrDefault();
-
-            if (user is null)
-            {
-                throw new FailedLoginException();
-            }
-
-            return user;
+            return Result.Failure<UserEntity>(string.Empty);
         }
         
     }

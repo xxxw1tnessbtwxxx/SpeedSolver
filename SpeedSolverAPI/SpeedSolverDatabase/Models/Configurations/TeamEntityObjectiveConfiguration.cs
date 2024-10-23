@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace SpeedSolverDatabase.Models.Configurations;
 
-public class TeamObjectiveConfiguration: IEntityTypeConfiguration<TeamObjective>
+public class TeamEntityObjectiveConfiguration: IEntityTypeConfiguration<TeamObjectiveEntity>
 {
-    public void Configure(EntityTypeBuilder<TeamObjective> builder)
+    public void Configure(EntityTypeBuilder<TeamObjectiveEntity> builder)
     {
         builder.ToTable("teamobjectives").HasKey(t => t.TeamObjectiveId);
         
