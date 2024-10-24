@@ -32,7 +32,7 @@ public class APIService
         return new APIService();
     }
 
-    public APIService WithUrl(BaseUrl baseUrl)
+    public APIService WithUrl(BaseUrl baseUrl = BaseUrl.Remote)
     {
         if (baseUrl == BaseUrl.Local)
         {

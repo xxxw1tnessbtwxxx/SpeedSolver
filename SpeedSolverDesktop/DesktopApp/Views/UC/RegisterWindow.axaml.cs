@@ -32,7 +32,7 @@ public partial class RegisterWindow : UserControl
 
         var service = APIService.APIService
             .BuildService()
-            .WithUrl(BaseUrl.Remote);
+            .WithUrl();
 
         var register = await service.Register(build.Value);
             
