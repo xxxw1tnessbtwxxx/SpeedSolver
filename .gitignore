@@ -3,5 +3,6 @@ vs/
 
 SpeedSolverAPI/SpeedSolverAPI/appsettings.json
 SpeedSolverAPI/SpeedSolverAPI/appsettings.Development.json
+SpeedSolverDesktop/DesktopApp/bin/Debug/net8.0/appsettings.json
 .idea
 .vs
