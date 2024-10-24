@@ -23,9 +23,10 @@ SpeedSolver — это система управления проектами, �
 
 ## Стек технологий
 
-- **Frontend**: JavaScript - Vite + React
+- **Frontend**: C# - Avalonia UI
 - **Backend**: С# - ASP.NET Core Web
-- **Object Relational Mapping**: Microsoft Entity Framework Core
+- **Mobile** Swift - Storyboard
+- **Object Relational Mapping**: Entity Framework Core
 - **База данных**: PostgreSQL
 - **Аутентификация**: JWT (JSON Web Tokens)
 - **Дополнительно**:
