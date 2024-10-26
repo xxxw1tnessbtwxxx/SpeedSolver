@@ -6,17 +6,19 @@ using SpeedSolverCore;
 using SpeedSolverCore.DTO.User;
 using SpeedSolverCore.JwtProvider;
 using SpeedSolverDatabase.Models;
+using SpeedSolverDatabaseAccess.Repo.abc;
 using SpeedSolverDatabaseAccess.Services;
+using SpeedSolverDatabaseAccess.Services.abc;
 
 namespace SpeedSolverAPI.Controllers
 {
     [ApiController]
     [Route("api/v1/users")]
-    public class UserController(IMapper mapper) : ControllerBase
+    public class UserController(IMapper mapper, Service<UserEntity> service) : ControllerBase
     {
 
         private readonly IMapper _mapper = mapper;
-
+        private readonly Service<UserEntity> _userService;
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody]RegisterRequest registerRequest)
         {
@@ -37,7 +39,7 @@ namespace SpeedSolverAPI.Controllers
                 return BadRequest(authResult.Error);
 
             
-            return Ok(new JwtProvider().GenerateJwtToken(authResult.Value));
+            return Ok(new JwtProvider().GenerateJwtToken(_mapper.Map<User>(authResult.Value)));
         }
         
         

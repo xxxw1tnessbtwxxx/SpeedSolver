@@ -21,7 +21,7 @@ namespace SpeedSolverDatabaseAccess.Services
     {
 
         public static UserService Create() => new UserService();
-        private UserService()
+        public UserService()
         {
             this._repository = new UserRepository();
         }

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using SpeedSolverAPI.DTO.Chat;
 using SpeedSolverDatabaseAccess.Services;
 using System.Formats.Asn1;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace SpeedSolverAPI.Controllers
@@ -17,7 +18,8 @@ namespace SpeedSolverAPI.Controllers
         {
             return NotFound();
         }
-
+        
+        [Authorize]
         [HttpGet("getMessageHistory")]
         public async Task<IActionResult> GetMessageHistory(int projectId)
         {

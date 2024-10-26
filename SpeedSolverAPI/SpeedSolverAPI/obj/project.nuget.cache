@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0MbGQj/kgX0=",
+  "dgSpecHash": "nDesqGe1GfE=",
   "success": true,
   "projectFilePath": "/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverAPI/SpeedSolverAPI.csproj",
   "expectedPackageFiles": [
@@ -56,6 +56,7 @@
     "/Users/w1tnessbtwwww/.nuget/packages/humanizer.core.zh-cn/2.14.1/humanizer.core.zh-cn.2.14.1.nupkg.sha512",
     "/Users/w1tnessbtwwww/.nuget/packages/humanizer.core.zh-hans/2.14.1/humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "/Users/w1tnessbtwwww/.nuget/packages/humanizer.core.zh-hant/2.14.1/humanizer.core.zh-hant.2.14.1.nupkg.sha512",
+    "/Users/w1tnessbtwwww/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/8.0.10/microsoft.aspnetcore.authentication.jwtbearer.8.0.10.nupkg.sha512",
     "/Users/w1tnessbtwwww/.nuget/packages/microsoft.aspnetcore.razor.language/6.0.24/microsoft.aspnetcore.razor.language.6.0.24.nupkg.sha512",
     "/Users/w1tnessbtwwww/.nuget/packages/microsoft.bcl.asyncinterfaces/7.0.0/microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
     "/Users/w1tnessbtwwww/.nuget/packages/microsoft.bcl.timeprovider/8.0.1/microsoft.bcl.timeprovider.8.0.1.nupkg.sha512",
@@ -94,6 +95,8 @@
     "/Users/w1tnessbtwwww/.nuget/packages/microsoft.identitymodel.abstractions/8.1.2/microsoft.identitymodel.abstractions.8.1.2.nupkg.sha512",
     "/Users/w1tnessbtwwww/.nuget/packages/microsoft.identitymodel.jsonwebtokens/8.1.2/microsoft.identitymodel.jsonwebtokens.8.1.2.nupkg.sha512",
     "/Users/w1tnessbtwwww/.nuget/packages/microsoft.identitymodel.logging/8.1.2/microsoft.identitymodel.logging.8.1.2.nupkg.sha512",
+    "/Users/w1tnessbtwwww/.nuget/packages/microsoft.identitymodel.protocols/7.1.2/microsoft.identitymodel.protocols.7.1.2.nupkg.sha512",
+    "/Users/w1tnessbtwwww/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/7.1.2/microsoft.identitymodel.protocols.openidconnect.7.1.2.nupkg.sha512",
     "/Users/w1tnessbtwwww/.nuget/packages/microsoft.identitymodel.tokens/8.1.2/microsoft.identitymodel.tokens.8.1.2.nupkg.sha512",
     "/Users/w1tnessbtwwww/.nuget/packages/microsoft.net.stringtools/17.8.3/microsoft.net.stringtools.17.8.3.nupkg.sha512",
     "/Users/w1tnessbtwwww/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
