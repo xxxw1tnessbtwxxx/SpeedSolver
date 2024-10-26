@@ -18,19 +18,6 @@
           }
         }
       },
-      "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1": {
-        "type": "package",
-        "dependencies": {
-          "AutoMapper": "[12.0.1]",
-          "Microsoft.Extensions.Options": "6.0.0"
-        },
-        "compile": {
-          "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
-        }
-      },
       "CSharpFunctionalExtensions/3.1.0": {
         "type": "package",
         "compile": {
@@ -2456,20 +2443,6 @@
         "icon.png",
         "lib/net6.0/AutoMapper.dll",
         "lib/net6.0/AutoMapper.xml"
-      ]
-    },
-    "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1": {
-      "sha512": "+g/K+Vpe3gGMKGzjslMOdqNlkikScDjWfVvmWTayrDHaG/n2pPmFBMa+jKX1r/h6BDGFdkyRjAuhFE3ykW+r1g==",
-      "type": "package",
-      "path": "automapper.extensions.microsoft.dependencyinjection/12.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
-        "automapper.extensions.microsoft.dependencyinjection.nuspec",
-        "icon.png",
-        "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
       ]
     },
     "CSharpFunctionalExtensions/3.1.0": {
@@ -6897,7 +6870,6 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "AutoMapper >= 13.0.1",
-      "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.10",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.20.1",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.6",
@@ -6908,36 +6880,38 @@
     ]
   },
   "packageFolders": {
-    "/Users/w1tnessbtwwww/.nuget/packages/": {}
+    "C:\\Users\\study\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverAPI/SpeedSolverAPI.csproj",
+      "projectUniqueName": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverAPI\\SpeedSolverAPI.csproj",
       "projectName": "SpeedSolverAPI",
-      "projectPath": "/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverAPI/SpeedSolverAPI.csproj",
-      "packagesPath": "/Users/w1tnessbtwwww/.nuget/packages/",
-      "outputPath": "/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverAPI/obj/",
+      "projectPath": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverAPI\\SpeedSolverAPI.csproj",
+      "packagesPath": "C:\\Users\\study\\.nuget\\packages\\",
+      "outputPath": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/w1tnessbtwwww/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\study\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverCore/SpeedSolverCore.csproj": {
-              "projectPath": "/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverCore/SpeedSolverCore.csproj"
+            "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverCore\\SpeedSolverCore.csproj": {
+              "projectPath": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverCore\\SpeedSolverCore.csproj"
             },
-            "/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverDatabaseAccess/SpeedSolverDatabaseAccess.csproj": {
-              "projectPath": "/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverAPI/SpeedSolverDatabaseAccess/SpeedSolverDatabaseAccess.csproj"
+            "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverDatabaseAccess\\SpeedSolverDatabaseAccess.csproj": {
+              "projectPath": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverDatabaseAccess\\SpeedSolverDatabaseAccess.csproj"
             }
           }
         }
@@ -6960,10 +6934,6 @@
           "AutoMapper": {
             "target": "Package",
             "version": "[13.0.1, )"
-          },
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": {
-            "target": "Package",
-            "version": "[12.0.1, )"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -7007,20 +6977,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1608",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: AutoMapper.Extensions.Microsoft.DependencyInjection 12.0.1 requires AutoMapper (= 12.0.1) but version AutoMapper 13.0.1 was resolved.",
-      "libraryId": "AutoMapper",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  }
 }

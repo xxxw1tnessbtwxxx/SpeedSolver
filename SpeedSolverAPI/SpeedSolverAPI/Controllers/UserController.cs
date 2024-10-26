@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi.Any;
 using SpeedSolverCore;
@@ -9,8 +10,11 @@ namespace SpeedSolverAPI.Controllers
 {
     [ApiController]
     [Route("api/v1/users")]
-    public class UserController : ControllerBase
+    public class UserController(IMapper mapper) : ControllerBase
     {
+
+        private readonly IMapper _mapper = mapper;
+
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody]RegisterRequest registerRequest)
         {
@@ -28,7 +32,7 @@ namespace SpeedSolverAPI.Controllers
             var authResult = await UserService.Create().Authorize(loginRequest);
 
             if (authResult.IsFailure) return BadRequest(authResult.Error);
-            return Ok();
+            return Ok(_mapper.Map<User>(authResult.Value));
         }
     }
 }

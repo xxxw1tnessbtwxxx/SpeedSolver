@@ -1,7 +1,7 @@
-using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using SpeedSolverAPI.MigrationHelper;
 using SpeedSolverDatabase;
+using System.Reflection;
 using AutoMapper;
 using SpeedSolverAPI.Mapper.Profiles;
 
@@ -24,10 +24,15 @@ builder.Services.AddCors(options =>
     });
 });
 
+
+
 builder.Services.AddDbContext<SpeedContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("DeployDatabase"));
 });
+
+
+builder.Services.AddAutoMapper(typeof(Program));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

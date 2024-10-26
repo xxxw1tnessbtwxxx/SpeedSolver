@@ -287,3 +287,4 @@ D:\Development\speedsolver\SpeedSolverAPI\SpeedSolverAPI\bin\Debug\net8.0\runtim
 D:\Development\speedsolver\SpeedSolverAPI\SpeedSolverAPI\bin\Debug\net8.0\SpeedSolverDatabaseAccess.dll
 D:\Development\speedsolver\SpeedSolverAPI\SpeedSolverAPI\bin\Debug\net8.0\SpeedSolverDatabaseAccess.pdb
 D:\Development\SpeedSolver\SpeedSolverAPI\SpeedSolverAPI\bin\Debug\net8.0\CSharpFunctionalExtensions.dll
+D:\Development\speedsolver\SpeedSolverAPI\SpeedSolverAPI\bin\Debug\net8.0\AutoMapper.dll
