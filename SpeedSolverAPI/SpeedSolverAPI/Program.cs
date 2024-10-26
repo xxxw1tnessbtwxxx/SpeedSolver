@@ -26,7 +26,7 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "My API",
+        Title = "SpeedSolver OpenAPI",
         Version = "v1"
     });
 
@@ -38,7 +38,7 @@ builder.Services.AddSwaggerGen(c =>
         Scheme = "Bearer",
         BearerFormat = "JWT",
         In = ParameterLocation.Header,
-        Description = "Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: 'Bearer 12345abcdef'",
+        Description = "Для доступа к endpoint'ам, требующие JWT авторизацию - в поле ниже введите полученный токен при авторизации. \r\n\r\nВНИМАНИЕ! Токен действителен 24 часа.\r\n\r\nФормат ввода: 'Bearer egqa.ds.1.3342'",
     });
     c.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
