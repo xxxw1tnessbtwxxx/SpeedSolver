@@ -7,5 +7,5 @@ public class ObjectiveEntity
     public string ObjectiveTitle { get; set; }
     public string ObjectiveDescription { get; set; }
     public virtual ProjectEntity? Project { get; set; }
-    public virtual List<UnderObjectiveEntity>? UnderObjectives { get; set; }
+    public virtual List<UnderObjectiveEntity>? UnderObjectives { get; set; } = null!;
 }

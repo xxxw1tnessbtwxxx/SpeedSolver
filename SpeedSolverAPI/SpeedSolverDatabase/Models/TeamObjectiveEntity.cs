@@ -7,5 +7,5 @@ public class TeamObjectiveEntity
     public int ObjectiveId { get; set; }
 
     public TeamEntity? Team { get; set; }
-    public List<ObjectiveEntity>? Objectives { get; set; }
+    public List<ObjectiveEntity>? Objectives { get; set; } = null!;
 }

@@ -8,6 +8,6 @@ public class TeamEntity
     public DateTime CreatedAt { get; set; } = DateTime.Now;
     public int CreatorId { get; set; }
     public UserEntity? Creator { get; set; }
-    public List<TeamObjectiveEntity>? Objectives { get; set; }
-    public List<ProjectEntity>? Projects { get; set; }
+    public List<TeamObjectiveEntity>? Objectives { get; set; } = null!;
+    public List<ProjectEntity>? Projects { get; set; } = null!;
 }

@@ -14,8 +14,8 @@ public class UserEntity
     public string? Patronymic { get; set; }
     public string? PhoneNumber { get; set; }
     
-    public virtual List<TeamEntity>? Teams { get; set; }
-    public virtual List<ProjectModeratorEntity>? ProjectModerated { get; set; }
-    public virtual List<InvitationEntity>? Invites { get; set; }
+    public virtual List<TeamEntity>? Teams { get; set; } = null!;
+    public virtual List<ProjectModeratorEntity>? ProjectModerated { get; set; } = null!;
+    public virtual List<InvitationEntity>? Invites { get; set; } = null!;
 
 }

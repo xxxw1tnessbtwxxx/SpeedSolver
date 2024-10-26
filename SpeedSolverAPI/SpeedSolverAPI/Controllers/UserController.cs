@@ -1,8 +1,10 @@
 using AutoMapper;
+using CSharpFunctionalExtensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi.Any;
 using SpeedSolverCore;
 using SpeedSolverCore.DTO.User;
+using SpeedSolverCore.JwtProvider;
 using SpeedSolverDatabase.Models;
 using SpeedSolverDatabaseAccess.Services;
 
@@ -26,6 +28,19 @@ namespace SpeedSolverAPI.Controllers
             return BadRequest(registerResult.Error);
         }
 
+        [HttpPost("jwtauthorize")]
+        public async Task<IActionResult> JwtAuthorize(AuthorizeRequest authorizeRequest)
+        {
+            var authResult = await UserService.Create().Authorize(authorizeRequest);
+
+            if (authResult.IsFailure)
+                return BadRequest(authResult.Error);
+
+            
+            return Ok(new JwtProvider().GenerateJwtToken(authResult.Value));
+        }
+        
+        
         [HttpPost("authorize")]
         public async Task<IActionResult> Authorize(AuthorizeRequest loginRequest)
         {

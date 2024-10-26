@@ -9,6 +9,7 @@ using System.Linq.Expressions;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
+using SpeedSolverDatabase.Helpers.Errors;
 
 namespace SpeedSolverDatabaseAccess.Repo
 {
@@ -34,6 +35,16 @@ namespace SpeedSolverDatabaseAccess.Repo
             throw new NotImplementedException();
         }
 
+        public async Task<Result<UserEntity, string>> GetByLogin(string login)
+        {
+            var userFromDb = _context.Users.Where(x => x.Login == login)
+                .AsNoTracking()
+                .FirstOrDefault()
+                .ToResult(error: "User not found");
+
+            return userFromDb;
+        }
+        
         public IQueryable<UserEntity> Filtered(Expression<Func<UserEntity, bool>> expression)
         {
             return _context.Users.Where(expression);

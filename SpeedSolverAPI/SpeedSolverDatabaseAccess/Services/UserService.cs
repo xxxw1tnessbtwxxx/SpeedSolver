@@ -28,11 +28,10 @@ namespace SpeedSolverDatabaseAccess.Services
         
         public async Task<Result<UserEntity>> Register(RegisterRequest registerRequest)
         {
-            string password = Crypto.HashPassword(registerRequest.Password);
             var insertingResult = _repository.Insert(new UserEntity
             {
                 Login = registerRequest.Login,
-                Password = password
+                Password = registerRequest.Password
             });
             
             if (insertingResult.IsSuccess)
@@ -46,8 +45,7 @@ namespace SpeedSolverDatabaseAccess.Services
 
         public async Task<Result<UserEntity>> Authorize(AuthorizeRequest authorizeRequest)
         {
-            string hashPassword = Crypto.HashPassword(authorizeRequest.Password);
-            var user = _repository.Filtered(x => x.Login == authorizeRequest.Login && x.Password == hashPassword)
+            var user = _repository.Filtered(x => x.Login == authorizeRequest.Login && x.Password == authorizeRequest.Password)
                 .AsNoTracking()
                 .FirstOrDefault();
 
