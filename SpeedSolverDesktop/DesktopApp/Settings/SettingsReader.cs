@@ -18,6 +18,6 @@ public class SettingsReader
         var configModel = new MainConfiguration();
         configuration.Bind(configModel);
 
-        return 
+        return configModel;
     }
 }

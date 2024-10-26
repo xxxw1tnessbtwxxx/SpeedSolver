@@ -1,6 +1,9 @@
+using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using SpeedSolverAPI.MigrationHelper;
 using SpeedSolverDatabase;
+using AutoMapper;
+using SpeedSolverAPI.Mapper.Profiles;
 
 var builder = WebApplication.CreateBuilder(args);
 

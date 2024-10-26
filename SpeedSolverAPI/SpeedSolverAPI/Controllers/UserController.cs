@@ -28,16 +28,7 @@ namespace SpeedSolverAPI.Controllers
             var authResult = await UserService.Create().Authorize(loginRequest);
 
             if (authResult.IsFailure) return BadRequest(authResult.Error);
-            return Ok(new UserDto
-            {
-                UserId = authResult.Value.UserId,
-                Name = authResult.Value.Name,
-                Surname = authResult.Value.Surname,
-                Patronymic = authResult.Value.Patronymic,
-                Invites = authResult.Value.Invites,
-                Teams = authResult.Value.Teams,
-                ProjectModerated = authResult.Value.ProjectModerated,
-            });
+            return Ok();
         }
     }
 }
