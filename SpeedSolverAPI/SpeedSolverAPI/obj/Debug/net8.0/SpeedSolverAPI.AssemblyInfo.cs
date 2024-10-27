@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SpeedSolverAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df9b3a2818d340d57dec255cc22eb200e7ab585a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d2729782eae6c28d3a97f6e954212c09d31b4ce6")]
 [assembly: System.Reflection.AssemblyProductAttribute("SpeedSolverAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SpeedSolverAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
