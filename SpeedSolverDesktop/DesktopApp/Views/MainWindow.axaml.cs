@@ -30,7 +30,7 @@ namespace DesktopApp
 
         private void ImRegisteredBtn_OnClick(object? sender, RoutedEventArgs e)
         {
-            UserActionControl.Content = new AuthozationWindow();
+            UserActionControl.Content = new AuthozationWindow(this);
         }
     }
 }

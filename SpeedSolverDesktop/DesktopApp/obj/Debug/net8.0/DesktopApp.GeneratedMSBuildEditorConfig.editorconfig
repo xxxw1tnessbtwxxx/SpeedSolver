@@ -31,5 +31,11 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverDesktop/DesktopApp/Views/UC/DefaultTextView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverDesktop/DesktopApp/Views/UC/MainPages/TeamsView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverDesktop/DesktopApp/Views/UC/RegisterWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverDesktop/DesktopApp/Views/Windows/MainPage.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

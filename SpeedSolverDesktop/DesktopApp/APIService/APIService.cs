@@ -81,7 +81,7 @@ public class APIService
         HttpResponseMessage response = null;
         try
         {
-            response = await this._requester.PostAsJsonAsync("users/jwtauthorize", request);
+            response = await this._requester.PostAsJsonAsync("users/authorize", request);
         }
         catch (Exception ex)
         {

@@ -47,6 +47,6 @@ public partial class RegisterWindow : UserControl
         }
 
         MessageBoxManager.GetMessageBoxStandard("Успешно", "Вы зарегистрировались в сервисе.").ShowAsync();
-        this._parent.UserActionControl.Content = new AuthozationWindow();
+        this._parent.UserActionControl.Content = new AuthozationWindow(_parent);
     }
 }

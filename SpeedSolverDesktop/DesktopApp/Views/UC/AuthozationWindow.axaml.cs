@@ -4,14 +4,19 @@ using MsBox.Avalonia;
 using DesktopApp.DTO;
 using System.Configuration;
 using DesktopApp.Helpers;
+using DesktopApp.Views.Windows;
 
 namespace DesktopApp.Views.UC;
 
 public partial class AuthozationWindow : UserControl
 {
-    public AuthozationWindow()
+
+    private MainWindow _parent;
+    
+    public AuthozationWindow(MainWindow parent)
     {
         InitializeComponent();
+        _parent = parent;
     }
 
     private async void AuthorizeBtn_OnClick(object? sender, RoutedEventArgs e)
@@ -41,7 +46,8 @@ public partial class AuthozationWindow : UserControl
 
         await MessageBoxManager.GetMessageBoxStandard("Успешно", "Вы успешно авторизовались в сервисе. Срок сессии: 24 часа.").ShowAsync();
         SessionProperties.Token = tokenCreation.Value;
-        await MessageBoxManager.GetMessageBoxStandard("asd", SessionProperties.Token).ShowAsync();
+        this._parent.Hide();
+        new MainPage().Show();
 
     }
 }
