@@ -24,7 +24,7 @@ SpeedSolver — это система управления проектами, �
 ## Стек технологий
 
 - **Frontend**: C# - Avalonia UI
-- **Backend**: С# - ASP.NET Core Web
+- **Backend**: С# - ASP.NET Core Web, Python - Websocker
 - **Mobile** Swift - Storyboard
 - **Object Relational Mapping**: Entity Framework Core
 - **База данных**: PostgreSQL
@@ -41,12 +41,12 @@ SpeedSolver — это система управления проектами, �
    ```bash
    git clone https://github.com/xxxw1tnessbtwxxx/SpeedSolver.git
 
-2. Необходимо переназначить порты в файлах **docker-compose.yml, docker-compose.override.yml, SpeedSolverAPI/Dockerfile** в случае, если у вас заняты:
-   - 5005
-   - 5006
-   - 5400
-   - 8765
-   - 6379
+2. Необходимо переназначить порты в файлах **docker-compose.yml, docker-compose.override.yml, SpeedSolverAPI/Dockerfile, WebSocket/Dockerfile** в случае, если у вас заняты:
+   - API:HTTP - 5005
+   - API:HTTPS - 5006
+   - PostgreSQL - 5555
+   - WebSocket Server - 8765
+   - Redis Instance - 6379
 4. Запустите Docker Engine на вашем компьютере или виртуальной машине.
 5. ```bash
    cd SpeedSolver/SpeedSolverAPI 
