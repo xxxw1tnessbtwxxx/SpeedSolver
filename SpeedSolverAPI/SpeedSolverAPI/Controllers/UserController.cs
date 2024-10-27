@@ -41,15 +41,5 @@ namespace SpeedSolverAPI.Controllers
             
             return Ok(new JwtProvider().GenerateJwtToken(_mapper.Map<User>(authResult.Value)));
         }
-        
-        
-        [HttpPost("authorize")]
-        public async Task<IActionResult> Authorize(AuthorizeRequest loginRequest)
-        {
-            var authResult = await UserService.Create().Authorize(loginRequest);
-
-            if (authResult.IsFailure) return BadRequest(authResult.Error);
-            return Ok(_mapper.Map<User>(authResult.Value));
-        }
     }
 }
