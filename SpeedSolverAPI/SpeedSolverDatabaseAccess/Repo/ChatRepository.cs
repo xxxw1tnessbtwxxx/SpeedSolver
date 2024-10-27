@@ -24,15 +24,15 @@ namespace SpeedSolverDatabaseAccess.Repo
 
         public IQueryable<InProjectMessageEntity> Filtered(Expression<Func<InProjectMessageEntity, bool>> expression)
         {
-            throw new NotImplementedException();
+            return _context.InProjectMessages.Where(expression);
         }
 
-        public List<InProjectMessageEntity> GetAll()
+        public Result<List<InProjectMessageEntity>> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public InProjectMessageEntity GetById(int id)
+        public Result<InProjectMessageEntity> GetById(int id)
         {
             throw new NotImplementedException();
         }

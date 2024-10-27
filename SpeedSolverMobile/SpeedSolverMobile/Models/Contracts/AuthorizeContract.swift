@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+class AuthorizeContract: Encodable {
+    
+    public let login: String
+    public let password: String
+    
+    
+    init(login: String, password: String) {
+        self.login = login
+        self.password = password
+    }
+}

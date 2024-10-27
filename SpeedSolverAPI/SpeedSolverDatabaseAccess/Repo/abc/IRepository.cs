@@ -16,7 +16,7 @@ namespace SpeedSolverDatabaseAccess.Repo.abc
         public Result<T> Update(T entity);
         public bool Delete(T entity);
         public void DeleteAll();
-        public T GetById(int id);
-        public List<T> GetAll();
+        public Result<T> GetById(int id);
+        public Result<List<T>> GetAll();
     }
 }

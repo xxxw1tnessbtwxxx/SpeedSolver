@@ -6,3 +6,16 @@
 //
 
 import Foundation
+import Alamofire
+
+final class APIService {
+    
+    public static let shared = APIService()
+    
+    private init() { }
+    
+    public func Authorize(credentials: AuthorizeContract, baseUrl: BaseUrl = .remote)  {
+
+        
+    }
+}

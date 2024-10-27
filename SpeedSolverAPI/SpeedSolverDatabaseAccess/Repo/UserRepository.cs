@@ -9,6 +9,7 @@ using System.Linq.Expressions;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
+using SpeedSolverCore.DTO.User;
 using SpeedSolverDatabase.Helpers.Errors;
 
 namespace SpeedSolverDatabaseAccess.Repo
@@ -25,12 +26,12 @@ namespace SpeedSolverDatabaseAccess.Repo
             throw new NotImplementedException();
         }
 
-        public List<UserEntity> GetAll()
+        public Result<List<UserEntity>> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public UserEntity GetById(int id)
+        public Result<UserEntity> GetById(int id)
         {
             throw new NotImplementedException();
         }
