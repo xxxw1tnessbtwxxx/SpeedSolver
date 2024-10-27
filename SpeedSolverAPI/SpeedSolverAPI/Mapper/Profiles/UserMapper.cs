@@ -9,5 +9,7 @@ public class UserMapper: Profile
     public UserMapper()
     {
         CreateMap<UserEntity, User>();
+        CreateMap<ProjectModeratorEntity, ProjectModerator>();
+        
     }
 }
