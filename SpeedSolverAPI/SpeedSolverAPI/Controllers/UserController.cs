@@ -30,7 +30,7 @@ namespace SpeedSolverAPI.Controllers
             return BadRequest(registerResult.Error);
         }
 
-        [HttpPost("jwtauthorize")]
+        [HttpPost("authorize")]
         public async Task<IActionResult> JwtAuthorize(AuthorizeRequest authorizeRequest)
         {
             var authResult = await UserService.Create().Authorize(authorizeRequest);
