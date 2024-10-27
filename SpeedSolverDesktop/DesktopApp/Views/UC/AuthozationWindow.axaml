@@ -3,7 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="DesktopApp.Views.UC.RegisterWindow">
+             x:Class="DesktopApp.Views.UC.AuthozationWindow">
     <UserControl.Styles>
         <Style Selector="TextBox">
             <Setter Property="Width" Value="170"/>
@@ -13,10 +13,11 @@
         </Style>
     </UserControl.Styles>
     <Grid ColumnDefinitions="*, *, *">
+        
         <Border Grid.Column="1"
-                BorderBrush="Gray"
-                Width="250"
-                Height="300"
+                BorderBrush="Black"
+                Width="200"
+                Height="200"
                 BorderThickness="1"
                 CornerRadius="15"
                 Padding="15">
@@ -24,22 +25,19 @@
             <StackPanel HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         Spacing="15">
-                <TextBlock Text="Регистрация"
+                <TextBlock Text="Авторизация"
                            FontFamily="Roboto"
                            FontSize="20"
-                           HorizontalAlignment="Center"/>
+                            HorizontalAlignment="Center"/>
                 <TextBox x:Name="LoginBox"
                          Watermark="Имя пользователя"/>
                 <TextBox x:Name="PasswordBox"
                          Watermark="Пароль"
                          Classes="password"/>
-                <TextBox x:Name="RepeatPasswordBox"
-                         Watermark="Повторите пароль"
-                         Classes="password"/>
-                <Button x:Name="RegisterBtn"
-                        Content="Зарегистрироваться"
+                <Button x:Name="AuthorizeBtn"
+                        Content="Авторизоваться"
                         HorizontalAlignment="Center"
-                        Click="RegisterBtn_OnClick"/>
+                        Click="AuthorizeBtn_OnClick"/>
             </StackPanel>
         </Border>
     </Grid>

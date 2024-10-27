@@ -25,6 +25,9 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverDesktop/DesktopApp/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverDesktop/DesktopApp/Views/UC/AuthozationWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverDesktop/DesktopApp/Views/UC/DefaultTextView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 

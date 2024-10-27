@@ -25,12 +25,12 @@ namespace DesktopApp
 
         private void ImFirstTimeBtn_OnClick(object? sender, RoutedEventArgs e)
         {
-            this.UserActionControl.Content = new RegisterWindow();
+            this.UserActionControl.Content = new RegisterWindow(this);
         }
 
         private void ImRegisteredBtn_OnClick(object? sender, RoutedEventArgs e)
         {
-            throw new System.NotImplementedException();
+            UserActionControl.Content = new AuthozationWindow();
         }
     }
 }

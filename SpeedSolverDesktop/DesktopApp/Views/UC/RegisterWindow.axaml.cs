@@ -10,9 +10,12 @@ namespace DesktopApp.Views.UC;
 
 public partial class RegisterWindow : UserControl
 {
-    public RegisterWindow()
+
+    private MainWindow _parent;
+    public RegisterWindow(MainWindow parent)
     {
         InitializeComponent();
+        _parent = parent;
     }
 
     private async void RegisterBtn_OnClick(object? sender, RoutedEventArgs e)
@@ -34,7 +37,7 @@ public partial class RegisterWindow : UserControl
             .BuildService()
             .WithUrl();
 
-        var register = await service.Register(build.Value);
+        var register = await service.RegisterUser(build.Value);
             
 
         if (register.IsFailure)
@@ -44,6 +47,6 @@ public partial class RegisterWindow : UserControl
         }
 
         MessageBoxManager.GetMessageBoxStandard("Успешно", "Вы зарегистрировались в сервисе.").ShowAsync();
-
+        this._parent.UserActionControl.Content = new AuthozationWindow();
     }
 }
