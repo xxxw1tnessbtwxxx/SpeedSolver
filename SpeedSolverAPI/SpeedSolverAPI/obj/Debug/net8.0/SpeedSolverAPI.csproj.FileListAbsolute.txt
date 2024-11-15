@@ -288,3 +288,12 @@ D:\Development\speedsolver\SpeedSolverAPI\SpeedSolverAPI\bin\Debug\net8.0\SpeedS
 D:\Development\speedsolver\SpeedSolverAPI\SpeedSolverAPI\bin\Debug\net8.0\SpeedSolverDatabaseAccess.pdb
 D:\Development\SpeedSolver\SpeedSolverAPI\SpeedSolverAPI\bin\Debug\net8.0\CSharpFunctionalExtensions.dll
 D:\Development\speedsolver\SpeedSolverAPI\SpeedSolverAPI\bin\Debug\net8.0\AutoMapper.dll
+D:\Development\speedsolver\SpeedSolverAPI\SpeedSolverAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Development\speedsolver\SpeedSolverAPI\SpeedSolverAPI\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll
+D:\Development\speedsolver\SpeedSolverAPI\SpeedSolverAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Development\speedsolver\SpeedSolverAPI\SpeedSolverAPI\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Development\speedsolver\SpeedSolverAPI\SpeedSolverAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Development\speedsolver\SpeedSolverAPI\SpeedSolverAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Development\speedsolver\SpeedSolverAPI\SpeedSolverAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Development\speedsolver\SpeedSolverAPI\SpeedSolverAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Development\speedsolver\SpeedSolverAPI\SpeedSolverAPI\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

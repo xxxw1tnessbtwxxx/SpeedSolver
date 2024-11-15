@@ -1,0 +1,6 @@
+{
+  "SpeedSolverAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverAPI",
+  "SpeedSolverCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverCore",
+  "SpeedSolverDatabase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverDatabase",
+  "SpeedSolverDatabaseAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Development\\speedsolver\\SpeedSolverAPI\\SpeedSolverDatabaseAccess"
+}

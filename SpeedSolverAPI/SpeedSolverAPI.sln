@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpeedSolverCore", "SpeedSol
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpeedSolverDatabaseAccess", "SpeedSolverDatabaseAccess\SpeedSolverDatabaseAccess.csproj", "{9F425D52-CDA8-4595-A2EB-F8E4007731FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeedSolverAPI.E2E", "SpeedSolverAPI.E2E\SpeedSolverAPI.E2E.csproj", "{C15C9F6D-B54D-41A4-B63D-C6463E628663}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{9F425D52-CDA8-4595-A2EB-F8E4007731FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F425D52-CDA8-4595-A2EB-F8E4007731FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F425D52-CDA8-4595-A2EB-F8E4007731FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C15C9F6D-B54D-41A4-B63D-C6463E628663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C15C9F6D-B54D-41A4-B63D-C6463E628663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C15C9F6D-B54D-41A4-B63D-C6463E628663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C15C9F6D-B54D-41A4-B63D-C6463E628663}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -108,3 +108,6 @@ app.UseCors("AllowAllOrigins");
 app.MapControllers();
 
 app.Run();
+
+
+public partial class Program { }
