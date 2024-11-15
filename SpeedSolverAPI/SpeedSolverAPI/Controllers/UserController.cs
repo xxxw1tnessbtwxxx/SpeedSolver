@@ -13,7 +13,7 @@ using SpeedSolverDatabaseAccess.Services.abc;
 namespace SpeedSolverAPI.Controllers
 {
     [ApiController]
-    [Route("api/v1/users")]
+    [Route("speedsolver/api/v1/users")]
     public class UserController(IMapper mapper, Service<UserEntity> service) : ControllerBase
     {
 
@@ -25,7 +25,6 @@ namespace SpeedSolverAPI.Controllers
             var registerResult = await UserService
                 .Create()
                 .Register(registerRequest);
-
             if (registerResult.IsSuccess) return Ok(registerResult.Value);
             return BadRequest(registerResult.Error);
         }

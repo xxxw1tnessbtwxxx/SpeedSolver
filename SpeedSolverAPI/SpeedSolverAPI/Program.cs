@@ -27,7 +27,7 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new OpenApiInfo
     {
         Title = "SpeedSolver OpenAPI",
-        Version = "v1"
+        Version = "v1",
     });
 
     // Настройка JWT аутентификации в Swagger
@@ -93,16 +93,22 @@ builder.Services.AddScoped<Service<UserEntity>, UserService>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwagger(swag =>
+    {
+        swag.RouteTemplate = "speedsolver/api/swagger/{documentName}/swagger.json";
+    });
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/speedsolver/api/swagger/v1/swagger.json", "My API V1");
+        c.RoutePrefix = "speedsolver/api/swagger";
+    });
     app.ApplyMigration();
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
 app.UseCors("AllowAllOrigins");
 app.MapControllers();
