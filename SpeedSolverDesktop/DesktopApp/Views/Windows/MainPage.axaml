@@ -44,7 +44,7 @@
                                 Margin="7 15 0 0">
                         <TextBlock Text="Команды"
                                    Opacity="0.6"/>
-                        <Button Classes="navigationBtn" Content="Управление командами"/>
+                        <Button x:Name="OpenTeamViewBtn" Classes="navigationBtn" Content="Управление командами" Click="OpenTeamViewBtn_OnClick"/>
                         <Button Classes="navigationBtn" Content="In Dev"/>
                         <Button Classes="navigationBtn" Content="In Dev"/>
                         <Button Classes="navigationBtn" Content="In Dev"/>

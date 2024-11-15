@@ -3,6 +3,7 @@ using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Layout;
 using Avalonia.Markup.Xaml;
+using DesktopApp.Views.UC.MainPages;
 
 namespace DesktopApp.Views.Windows;
 
@@ -28,5 +29,10 @@ public partial class MainPage : Window
     {
         InterractPane.Content = ">";
         InterractPane.HorizontalAlignment = HorizontalAlignment.Left;
+    }
+
+    private void OpenTeamViewBtn_OnClick(object? sender, RoutedEventArgs e)
+    {
+        CurrentViewContent.Content = new TeamsView();
     }
 }
