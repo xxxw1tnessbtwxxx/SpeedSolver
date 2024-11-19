@@ -12,5 +12,5 @@ jobs:
         run: |
           pwd
           echo -------
-          cd SpeedSolverAPI/
-          docker-compose up -d --build
+          cd SpeedSolverAPI/docker
+          docker-compose -f docker/docker-compose.yml --project-directory . up --build 
