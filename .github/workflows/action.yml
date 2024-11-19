@@ -14,4 +14,4 @@ jobs:
           echo -------
           cd SpeedSolverAPI/
           echo "${{ secrets.ENV_FILE}}" > .env
-          docker-compose -f --env-file .env docker/docker-compose.yml --project-directory . up --build 
+          docker-compose--env-file .env -f docker/docker-compose.yml --project-directory . up --build 
