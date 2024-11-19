@@ -9,6 +9,8 @@ api = FastAPI(
     root_path=configModel.api.API_BASE_PATH
 )
 
+#rand 
+
 api.add_middleware (
     CORSMiddleware,
     allow_origins=["*"],
