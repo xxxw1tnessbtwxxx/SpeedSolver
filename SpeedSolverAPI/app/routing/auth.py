@@ -14,3 +14,10 @@ async def register():
     return {
         "message": "signup"
     }
+
+
+@authRouter.get("/idinahuy")
+async def idinah():
+    return {
+        0: 0
+    }
