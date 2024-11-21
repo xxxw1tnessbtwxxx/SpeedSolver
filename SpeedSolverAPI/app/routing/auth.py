@@ -3,13 +3,13 @@ from fastapi import APIRouter
 
 authRouter = APIRouter(prefix="/auth", tags=["Auth"])
 
-@authRouter.get("/signin")
+@authRouter.get("/login")
 async def signin():
     return {
         "message": "signin"
     }
 
-@authRouter.post("/signup")
+@authRouter.post("/register")
 async def register():
     return {
         "message": "signup"
