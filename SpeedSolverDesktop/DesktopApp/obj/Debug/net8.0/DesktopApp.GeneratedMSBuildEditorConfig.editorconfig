@@ -15,27 +15,27 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DesktopApp
-build_property.ProjectDir = /Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverDesktop/DesktopApp/
+build_property.ProjectDir = /Users/w1tnessbtwwww/Development/speedSolverRemake/SpeedSolver/SpeedSolverDesktop/DesktopApp/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverDesktop/DesktopApp/App.axaml]
+[/Users/w1tnessbtwwww/Development/speedSolverRemake/SpeedSolver/SpeedSolverDesktop/DesktopApp/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverDesktop/DesktopApp/Views/MainWindow.axaml]
+[/Users/w1tnessbtwwww/Development/speedSolverRemake/SpeedSolver/SpeedSolverDesktop/DesktopApp/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverDesktop/DesktopApp/Views/UC/AuthozationWindow.axaml]
+[/Users/w1tnessbtwwww/Development/speedSolverRemake/SpeedSolver/SpeedSolverDesktop/DesktopApp/Views/UC/AuthozationWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverDesktop/DesktopApp/Views/UC/DefaultTextView.axaml]
+[/Users/w1tnessbtwwww/Development/speedSolverRemake/SpeedSolver/SpeedSolverDesktop/DesktopApp/Views/UC/DefaultTextView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverDesktop/DesktopApp/Views/UC/MainPages/TeamsView.axaml]
+[/Users/w1tnessbtwwww/Development/speedSolverRemake/SpeedSolver/SpeedSolverDesktop/DesktopApp/Views/UC/MainPages/TeamsView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverDesktop/DesktopApp/Views/UC/RegisterWindow.axaml]
+[/Users/w1tnessbtwwww/Development/speedSolverRemake/SpeedSolver/SpeedSolverDesktop/DesktopApp/Views/UC/RegisterWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverDesktop/DesktopApp/Views/Windows/MainPage.axaml]
+[/Users/w1tnessbtwwww/Development/speedSolverRemake/SpeedSolver/SpeedSolverDesktop/DesktopApp/Views/Windows/MainPage.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

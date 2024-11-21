@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverDesktop/DesktopApp/DesktopApp.csproj": {}
+    "/Users/w1tnessbtwwww/Development/speedSolverRemake/SpeedSolver/SpeedSolverDesktop/DesktopApp/DesktopApp.csproj": {}
   },
   "projects": {
-    "/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverDesktop/DesktopApp/DesktopApp.csproj": {
+    "/Users/w1tnessbtwwww/Development/speedSolverRemake/SpeedSolver/SpeedSolverDesktop/DesktopApp/DesktopApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverDesktop/DesktopApp/DesktopApp.csproj",
+        "projectUniqueName": "/Users/w1tnessbtwwww/Development/speedSolverRemake/SpeedSolver/SpeedSolverDesktop/DesktopApp/DesktopApp.csproj",
         "projectName": "DesktopApp",
-        "projectPath": "/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverDesktop/DesktopApp/DesktopApp.csproj",
+        "projectPath": "/Users/w1tnessbtwwww/Development/speedSolverRemake/SpeedSolver/SpeedSolverDesktop/DesktopApp/DesktopApp.csproj",
         "packagesPath": "/Users/w1tnessbtwwww/.nuget/packages/",
-        "outputPath": "/Users/w1tnessbtwwww/Development/speedsolver/SpeedSolverDesktop/DesktopApp/obj/",
+        "outputPath": "/Users/w1tnessbtwwww/Development/speedSolverRemake/SpeedSolver/SpeedSolverDesktop/DesktopApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/w1tnessbtwwww/.nuget/NuGet/NuGet.Config"

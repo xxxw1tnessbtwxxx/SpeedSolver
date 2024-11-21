@@ -6,7 +6,6 @@ api = FastAPI(
     title="SpeedSolverAPI",
     description="The API docs for SpeedSolver.",
     version="v1",
-    root_path=configModel.api.API_BASE_PATH
 )
 
 #rand 
