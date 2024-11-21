@@ -1,0 +1,11 @@
+.env
+.vs
+.idea
+
+__pycache__/
+SpeedSolverAPI/docker/docker-compose-dev.yml
+SpeedSolverSite/node_modules/
+.env.develop
+*.pyc
+*.pyo
+*.pyd
