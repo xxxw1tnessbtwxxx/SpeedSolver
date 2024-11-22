@@ -10,8 +10,6 @@ jobs:
 
       - name: run compose
         run: |
-          pwd
-          echo -------
           cd SpeedSolverAPI/
           echo "${{ secrets.ENV_FILE}}" > .env
           docker-compose --env-file .env -f docker/docker-compose.yml --project-directory . up --build -d

@@ -27,15 +27,14 @@
 
 ## Стек технологий
 
-- **Frontend**: HTML, CSS (Bootstrap), JavaScript
-- **Backend**: Python (FastAPI)
+- **Frontend**: Vue.js
+- **Backend**: Python - FastAPI, Python WebSockets
 - **Mobile** Swift - Storyboard
-- **Object Relational Mapping**: SQLAlchemy + Alembic
+- **Object Relational Mapping**: Python SQLAlchemy + Alembic
 - **База данных**: PostgreSQL
 - **Аутентификация & Авторизация**: JWT (JSON Web Tokens)
 - **Дополнительно**:
    - Docker – контейнеризация/рзавертывание приложения.
-   - Python WebSockets – интеграции чата в проекты.
    - Redis – Кэш-хранилище.
    - Nginx - Веб-сервер для проксирования внешних подключений путем **reverse proxy**, реализация защищенного соединения с **SSL/TLS**, проксирование поддоменов.
    - Github Actions (CI/CD) – непрерывная интеграции и непрерывной доставки.

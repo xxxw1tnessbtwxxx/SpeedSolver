@@ -4,5 +4,9 @@ run:
 dev:
 	docker-compose --env-file .env.develop -f docker/docker-compose.yml --project-directory . up --build
 
-	
+rev:
+	poetry run alembic revision --autogenerate
+
+upg:
+	poetry run alembic upgrade head
 
