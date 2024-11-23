@@ -8,3 +8,7 @@ async def authorze(data: Authorize):
     return {
         "auth": True
     }
+
+@authRouter.get("/asdsda")
+async def register():
+    ...
