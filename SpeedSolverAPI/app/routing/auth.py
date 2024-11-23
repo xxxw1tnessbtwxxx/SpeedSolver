@@ -3,7 +3,7 @@ from ..schema.authorize import Authorize
 
 authRouter = APIRouter(prefix="/auth", tags=["Auth"])
 
-@authRouter.get("/authorize")
+@authRouter.post("/authorize")
 async def authorze(data: Authorize):
     return {
         "auth": True

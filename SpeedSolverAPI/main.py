@@ -8,7 +8,7 @@ api = FastAPI(
     version="v1",
 )
 
-#rand 
+#rand#
 
 api.add_middleware (
     CORSMiddleware,
