@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button, Divider } from 'antd';
 import styles from './Header.module.css'
 
