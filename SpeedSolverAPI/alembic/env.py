@@ -4,9 +4,9 @@ from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 
 from alembic import context
-from app.database.models.models import Base
+from app.database.models.base import Base
 from app.cfg.config import config as cfg
-
+from app.database.models.user import User
 config = context.config
 config.set_main_option("sqlalchemy.url", f"{cfg.db_url}")
 if config.config_file_name is not None:

@@ -1,16 +1,10 @@
 from fastapi import APIRouter
-
+from ..schema.authorize import Authorize
 
 authRouter = APIRouter(prefix="/auth", tags=["Auth"])
 
-@authRouter.get("/login")
-async def signin():
+@authRouter.get("/authorize")
+async def authorze(data: Authorize):
     return {
-        "message": "signin"
-    }
-
-@authRouter.post("/register")
-async def register():
-    return {
-        "message": "signup"
+        "auth": True
     }
