@@ -1,11 +1,29 @@
-FROM node:apline AS build
-WORKDIR /app/web
+# Этап сборки проекта
+FROM node:14-alpine AS build-stage
 
-COPY . .
+# Устанавливаем рабочую директорию
+WORKDIR /app
+
+# Копируем package.json и package-lock.json
+COPY package*.json ./
+
+# Устанавливаем зависимости
 RUN npm install
+
+# Копируем остальные файлы проекта
+COPY . .
+
+# Сборка проекта
 RUN npm run build
 
-COPY --from=build /app/dist /usr/share/nginx/html
+# Проверяем, что директория dist существует и содержит файлы
+RUN ls -la dist
 
-EXPOSE 3000
-EXPOSE 80
+# Этап копирования собранных файлов
+FROM alpine:latest
+
+# Устанавливаем рабочую директорию
+WORKDIR /app
+
+# Копируем собранные файлы из предыдущего этапа сборки
+COPY --from=build-stage /app/dist /app/dist
