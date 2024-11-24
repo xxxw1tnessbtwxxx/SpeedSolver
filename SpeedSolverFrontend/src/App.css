@@ -8,11 +8,23 @@ body {
     display: flex;
     margin: 0;
     padding: 0;
+    flex-direction: column;
+}
+
+.welcomeText {
+  text-align: center;
 }
 
 .container {
+  margin: auto;
+  justify-content: center;
+  align-self: center;
+  width: 80%;
+  height: 100%;
+}
+
+.cards {
   display: flex;
-  width: 90%;
-  justify-self: center;
-  background-color: black;
+  flex-direction: row;
+  justify-content: space-around;
 }
