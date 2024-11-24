@@ -10,6 +10,25 @@
     flex-direction: row;
     gap: 10px;
     margin-right: 20px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerButton {
+    background-color: #007bff; /* Синий фон */
+    color: #ffffff; /* Белый текст */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.headerButton:hover {
+    background-color: #0056b3; /* Темнее синий фон при наведении */
 }
 
 .container {
@@ -18,4 +37,9 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+}
+
+.nounderline {
+    text-decoration: none;
+    color: black;
 }

@@ -4,16 +4,15 @@ import './App.css'
 import InfoCard from './components/InfoCard/InfoCard'
 import Description from './components/Description/Description'
 import { Route, Router, Routes} from 'react-router-dom'
-import Login from './pages/Login'
-import WelcomePage from './pages/WelcomePage'
+import GetService from './pages/GetService/GetService'
+import WelcomePage from './pages/Welcome/WelcomePage'
 export default function App() {
 
   return (
     <>
-      <Header/>
       <Routes>
         <Route path='/' element={<WelcomePage/>}/>
-        <Route path='/login' element={<Login/>}/>
+        <Route path='/getservice' element={<GetService/>}/>
       </Routes>
     </>
     
