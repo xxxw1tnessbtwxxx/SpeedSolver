@@ -1,8 +1,8 @@
 # Используем официальный Node.js образ
-FROM node:18 AS build
+FROM node:20 AS build
 
 # Устанавливаем рабочую директорию
-WORKDIR /app
+WORKDIR /app/frontend
 
 # Копируем package.json и package-lock.json
 COPY package*.json ./
@@ -19,11 +19,12 @@ RUN npm run build
 # Используем Nginx для продакшн сервера
 FROM nginx:alpine
 
+
 # Копируем билд из первого этапа
-COPY --from=build /app/dist /usr/share/nginx/html
+COPY --from=build /app/frontend/dist /usr/share/nginx/html
 
 # Открываем порт 80
-EXPOSE 80
+EXPOSE 3000
 
-# Запускаем Nginx
+
 CMD ["nginx", "-g", "daemon off;"]

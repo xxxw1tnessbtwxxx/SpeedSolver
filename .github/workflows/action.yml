@@ -8,8 +8,13 @@ jobs:
       - name: cloning repo
         uses: actions/checkout@v4
 
-      - name: run compose
+      - name: run backend
         run: |
           cd SpeedSolverAPI/
           echo "${{ secrets.ENV_FILE}}" > .env
           docker-compose --env-file .env -f docker/docker-compose.yml --project-directory . up --build -d
+
+      - name: run frontend
+        run: |
+          cd SpeedSolverFrontend/
+          docker-compose --env-file -f docker-compose.web.yml --project-directory . up --build -d
