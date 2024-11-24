@@ -1,4 +1,4 @@
-from SpeedSolverAPI.app.schema.authorize import Authorize
+from app.schema.authorize import Authorize
 from ..abstract.abc_repo import AbstractRepository
 from ..models.user import User
 
