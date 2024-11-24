@@ -1,5 +1,5 @@
-# Этап сборки проекта
-FROM node:14-alpine AS build-stage
+# Используем официальный Node.js образ
+FROM node:18 AS build
 
 # Устанавливаем рабочую директорию
 WORKDIR /app
@@ -10,20 +10,20 @@ COPY package*.json ./
 # Устанавливаем зависимости
 RUN npm install
 
-# Копируем остальные файлы проекта
+# Копируем весь проект в контейнер
 COPY . .
 
-# Сборка проекта
+# Строим проект
 RUN npm run build
 
-# Проверяем, что директория dist существует и содержит файлы
-RUN ls -la dist
+# Используем Nginx для продакшн сервера
+FROM nginx:alpine
 
-# Этап копирования собранных файлов
-FROM alpine:latest
+# Копируем билд из первого этапа
+COPY --from=build /app/dist /usr/share/nginx/html
 
-# Устанавливаем рабочую директорию
-WORKDIR /app
+# Открываем порт 80
+EXPOSE 80
 
-# Копируем собранные файлы из предыдущего этапа сборки
-COPY --from=build-stage /app/dist /app/dist
+# Запускаем Nginx
+CMD ["nginx", "-g", "daemon off;"]
