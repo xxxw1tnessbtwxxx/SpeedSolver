@@ -20,7 +20,7 @@ RUN npm run build
 FROM nginx:alpine
 
 
-# Копируем билд из первого этапа
+COPY nginx.conf /etc/nginx/nginx.conf
 COPY --from=build /app/frontend/dist /usr/share/nginx/html
 
 # Открываем порт 80
