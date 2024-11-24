@@ -12,7 +12,6 @@ export default function Header() {
                     <Button type='primary'>Register</Button>
                 </div>
             </div>
-            <Divider/>
         </header>
     )
 }

@@ -2,16 +2,14 @@
 import Header from './components/Header/Header'
 import './App.css'
 import InfoCard from './components/InfoCard/InfoCard'
+import Description from './components/Description/Description'
 export default function App() {
 
   return (
     <>
       <Header/>
       <div className="container">
-        <div className="welcomeText">
-          <h2>Добро пожаловать в SpeedSolver</h2> 
-        </div>
-
+        <Description/>
 
         <div className="cards">
           <InfoCard title="Планируйте." description="Создавайте необходимые задачи."/>
