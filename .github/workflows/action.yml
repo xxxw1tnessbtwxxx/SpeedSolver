@@ -17,4 +17,4 @@ jobs:
       - name: run frontend
         run: |
           cd SpeedSolverFrontend/
-          docker-compose --env-file -f docker-compose.web.yml --project-directory . up --build -d
+          docker-compose -f docker-compose.web.yml --project-directory . up --build -d
