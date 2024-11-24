@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 
-class Authorize(BaseModel):
+class GetServiceRequest(BaseModel):
     login: str
     password: str
+    email: str | None

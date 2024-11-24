@@ -2,7 +2,7 @@ run:
 	docker-compose --env-file .env -f docker/docker-compose.yml --project-directory . up --build
 
 dev:
-	docker-compose --env-file .env.develop -f docker/docker-compose.yml --project-directory . up --build
+	poetry run uvicorn main:api --reload --port 8000
 
 rev:
 	poetry run alembic revision --autogenerate
