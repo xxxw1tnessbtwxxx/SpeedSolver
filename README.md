@@ -45,9 +45,9 @@
    ```bash
    git clone https://github.com/xxxw1tnessbtwxxx/SpeedSolver.git
 
-2. Необходимо переназначить порты в файлах **docker-compose.yml, docker-compose.override.yml, SpeedSolverAPI/Dockerfile, WebSocket/Dockerfile** в случае, если у вас заняты:
-   - API:HTTPS - 5678
-   - PostgreSQL - 5555
+2. Необходимо переназначить порты в файлах **SpeedSolverAPI/docker/docker-compose.yml, SpeedSolverFrontend/docker-compose.web.yml, WebSocket/Dockerfile** в случае, если у вас заняты:
+   - API:HTTP - 5678
+   - PostgreSQL - 5435
    - WebSocket Server - 8765
    - Redis Instance - 6379
 4. Запустите Docker Engine на вашем компьютере или виртуальной машине.
