@@ -60,4 +60,4 @@
 Документация к API будет создана автоматически с помощью Swagger UI. Получить документацию можно по адресу: https://your-ip:your-port/swagger/index.html
 
 ## Лицензия
-Данный программный продукт свободно распространяется под описаннымии правилами Apache License 2.0. Для ознакомления - [click](https://github.com/w1tnessbtwwwww/SpeedSolver/blob/master/LICENSE).
+Этот проект лицензирован по лицензии Apache License 2.0. Подробности см. в файле [LICENSE](https://github.com/w1tnessbtwwwww/SpeedSolver/blob/master/LICENSE).
