@@ -3,14 +3,18 @@ from fastapi import FastAPI
 from app.routing.main_router import mainRouter
 from starlette.middleware.cors import CORSMiddleware
 
+from app.handlers.auto_migrate import migrate
+
 from alembic.config import Config
 from alembic import command
+
 api = FastAPI(
     title="SpeedSolverAPI",
     description="The API docs for SpeedSolver.",
     version="v1",
 )
 
+api.add_event_handler("startup", migrate)
 
 #rand#
 
