@@ -1,20 +1,6 @@
 version: '3.9'
 
 services:
-  speedsolver_api:
-    container_name: speedsolver_api
-    build:
-      context: .
-      dockerfile: docker/Dockerfile
-    restart: always
-    command: ["poetry", "run", "uvicorn", "main:api", "--host", "0.0.0.0", "--port", "8000"]
-    env_file:
-      - .env
-    ports:
-      - ${API_BASE_PORT}:8000
-    
-    depends_on:
-      - speedsolver_database
 
   speedsolver.database:
     container_name: speedsolver_database
@@ -30,3 +16,19 @@ services:
       - ${POSTGRES_PORT}:5432
     volumes:
       - /var/lib/postgresql/data
+
+  speedsolver_api:
+    container_name: speedsolver_api
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    restart: always
+    command: ["poetry", "run", "uvicorn", "main:api", "--host", "0.0.0.0", "--port", "8000"]
+    env_file:
+      - .env
+    ports:
+      - ${API_BASE_PORT}:8000
+    
+    depends_on:
+      - speedsolver.database
+
