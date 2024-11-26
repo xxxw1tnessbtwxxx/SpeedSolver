@@ -12,7 +12,3 @@ async def authorize(authRequest: GetServiceRequest, session: Session = Depends(g
 @authRouter.post("/register")
 async def register(regRequest: GetServiceRequest, session: Session = Depends(get_session)):
     return await UserRepository(session).register(regRequest)
-
-@authRouter.get("/arinaLoshara")
-async def test(login: str, session: Session = Depends(get_session)):
-    return await UserRepository(session).get_by_login(login)
