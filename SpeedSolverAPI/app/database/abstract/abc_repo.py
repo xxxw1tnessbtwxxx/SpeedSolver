@@ -30,7 +30,7 @@ class AbstractRepository(ABC):
     async def create(self, **kwargs):
         query = insert(self.model).values(**kwargs).returning(self.model)
         result = self._session.execute(query)
-        self.commit()
+        await self.commit()
         return result.scalars().first()
 
     async def update_one(self, id, **kwargs):
