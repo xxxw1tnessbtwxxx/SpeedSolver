@@ -7,6 +7,7 @@ from alembic import context
 from app.database.models.base import Base
 from app.cfg.config import config as cfg
 from app.database.models.user import User
+from app.database.models.user_profile import UserProfile
 config = context.config
 config.set_main_option("sqlalchemy.url", f"{cfg.db_url}")
 if config.config_file_name is not None:
