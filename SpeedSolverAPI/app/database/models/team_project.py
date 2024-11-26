@@ -14,6 +14,6 @@ from .base import Base
 
 class TeamProject(Base):
     __tablename__ = "teams_projects"
-    teamProjectId: Mapped[UUID] = mapped_column(UUID, nullable=False, default=uuid.uuid4)
-    teamId: Mapped[UUID] = mapped_column(UUID, nullable=False)
-    projectId: Mapped[UUID] = mapped_column(UUID, nullable=False)
+    teamProjectId: Mapped[UUID] = mapped_column(UUID, primary_key=True, nullable=False, default=uuid.uuid4)
+    teamId: Mapped[UUID] = mapped_column(ForeignKey("teams.teamId"))
+    projectId: Mapped[UUID] = mapped_column(ForeignKey("projects.projectId"))

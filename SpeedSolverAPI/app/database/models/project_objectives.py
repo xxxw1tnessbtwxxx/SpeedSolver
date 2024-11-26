@@ -14,6 +14,6 @@ from .base import Base
 
 class ProjectObjectives(Base):
     __tablename__ = "projects_objectives"
-    projectObjectiveId: Mapped[UUID] = mapped_column(UUID, nullable=False, default=uuid.uuid4)
-    projectId: Mapped[UUID] = mapped_column(UUID, nullable=False)
-    objectiveId: Mapped[UUID] = mapped_column(UUID, nullable=False)
+    projectObjectiveId: Mapped[UUID] = mapped_column(UUID, primary_key=True, nullable=False, default=uuid.uuid4)
+    projectId: Mapped[UUID] = mapped_column(ForeignKey("projects.projectId"))
+    objectiveId: Mapped[UUID] = mapped_column(ForeignKey("objectives.objectiveId"))
