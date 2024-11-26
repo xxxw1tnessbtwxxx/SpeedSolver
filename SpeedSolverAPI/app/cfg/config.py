@@ -13,8 +13,8 @@ class Config(BaseSettings):
         env_file = ".env"
 
     @property
-    def db_url(self):
-        return URL.build (
+    def db_url(self) -> URL:
+        url = URL.build (
             scheme="postgresql+psycopg2",
             host=self.POSTGRES_HOST,
             port=self.POSTGRES_PORT,
@@ -22,5 +22,7 @@ class Config(BaseSettings):
             password=self.POSTGRES_PASSWORD,
             path=f"/{self.POSTGRES_DB}"
         )
+        print(url)
+        return url
     
 config: Config = Config()
