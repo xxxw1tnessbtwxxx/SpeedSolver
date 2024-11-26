@@ -14,7 +14,7 @@ services:
       - ${API_BASE_PORT}:8000
     
     depends_on:
-      - speedsolver.database
+      - speedsolver_database
 
   speedsolver.database:
     container_name: speedsolver_database
