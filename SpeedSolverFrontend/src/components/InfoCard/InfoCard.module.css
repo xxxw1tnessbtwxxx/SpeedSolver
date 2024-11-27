@@ -8,14 +8,3 @@
     border-radius: 15px;
     text-align: center;
 }
-
-@media (max-width: 768px) {
-    .card {
-        flex: 1 1 calc(50% - 20px); /* Две карточки в ряд на планшетах */
-    }
-}
-@media (max-width: 480px) {
-    .card {
-        flex: 1 1 calc(100% - 20px); /* Одна карточка в ряд на мобильных устройствах */
-    }
-}
