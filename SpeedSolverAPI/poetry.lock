@@ -656,6 +656,17 @@ files = [
 ]
 
 [[package]]
+name = "py-automapper"
+version = "1.2.3"
+description = "Library for automatically mapping one object to another"
+optional = false
+python-versions = ">=3.7,<4.0"
+files = [
+    {file = "py-automapper-1.2.3.tar.gz", hash = "sha256:ae1f6f270c3bb42cd52bfc124630841019b278258c001a8ed3032cffa03327b4"},
+    {file = "py_automapper-1.2.3-py3-none-any.whl", hash = "sha256:bcc5236fa0caeffa10416e31dd379fb6ddd15f18e6c2d7a1d49fb3d341f07653"},
+]
+
+[[package]]
 name = "pydantic"
 version = "2.9.2"
 description = "Data validation using Python type hints"
@@ -1064,4 +1075,4 @@ propcache = ">=0.2.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "f16c8994b6a9232385f767423120fae3e76bf3b043c6f7d82323a74d8392981e"
+content-hash = "39ff8d0a8dccea2c5aede264698b8a839cca152b78bc57cdb8c6fadbae715688"
