@@ -16,6 +16,7 @@ class Team(Base):
     __tablename__ = "teams"
 
     teamId: Mapped[UUID] = mapped_column(UUID, primary_key=True, default=uuid.uuid4)
-    teamMame: Mapped[str] = mapped_column(nullable=True)
+    teamName: Mapped[str] = mapped_column(nullable=True)
     teamDescription: Mapped[str] = mapped_column(nullable=True)
     createdAt: Mapped[Date] = mapped_column(Date, nullable=True, default=datetime.date.today())
+    leaderId: Mapped[UUID] = mapped_column(UUID, nullable=False)

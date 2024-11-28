@@ -4,4 +4,4 @@ from typing import Optional
 class GetServiceRequest(BaseModel):
     login: str
     password: str
-    email: str | None
+    email: Optional[str]
