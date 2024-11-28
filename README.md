@@ -27,7 +27,7 @@
 
 ## Стек технологий
 
-- **Frontend**: Vue.js
+- **Frontend**: React.js
 - **Backend**: Python - FastAPI, Python WebSockets
 - **Mobile** Swift - Storyboard
 - **Object Relational Mapping**: Python SQLAlchemy + Alembic
@@ -37,7 +37,7 @@
    - Docker – контейнеризация/рзавертывание приложения.
    - Redis – Кэш-хранилище.
    - Nginx - Веб-сервер для проксирования внешних подключений путем **reverse proxy**, реализация защищенного соединения с **SSL/TLS**, проксирование поддоменов.
-   - Github Actions (CI/CD) – непрерывная интеграции и непрерывной доставки.
+   - Github Actions (CI/CD) – непрерывная интеграция и непрерывная доставка.
 
 ## Установка
 
