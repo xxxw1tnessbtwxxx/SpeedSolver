@@ -1,4 +1,11 @@
 
-.welcomeText {
-    text-align: center;
+.logo {
+    transform: scaleX(-1);
+}
+
+.description {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
 }

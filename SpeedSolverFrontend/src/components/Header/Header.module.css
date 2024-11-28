@@ -1,45 +1,19 @@
-.headerMain {
+
+.header {
     display: flex;
-    flex-direction: column;
-    margin: 15px;
-    border-bottom: 2px solid gray;
-}
-
-.headerButtons {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    margin-right: 20px;
-    height: 30px;
-    align-items: center;
-    justify-content: center;
-}
-
-.headerButton {
-    background-color: #007bff; /* Синий фон */
-    color: #ffffff; /* Белый текст */
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.headerButton:hover {
-    background-color: #0056b3; /* Темнее синий фон при наведении */
-}
-
-.container {
-    display: flex;
+    margin: 0;
+    padding: 0;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    margin: 10px;
 }
 
-.nounderline {
-    text-decoration: none;
-    color: black;
+.headerText {
+    color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
