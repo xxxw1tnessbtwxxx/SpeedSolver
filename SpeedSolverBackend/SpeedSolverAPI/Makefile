@@ -7,6 +7,6 @@ dev:
 rev:
 	poetry run alembic revision --autogenerate
 
-upg:
+mig:
 	poetry run alembic upgrade head
 
