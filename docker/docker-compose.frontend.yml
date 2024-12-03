@@ -3,7 +3,9 @@ version: '3.9'
 services:
   web:
     container_name: speedsolverfrontend
-    build: .
+    build: 
+      context: .
+      dockerfile: docker/Dockerfile.frontend
     ports:
       - 3001:80
     environment:
