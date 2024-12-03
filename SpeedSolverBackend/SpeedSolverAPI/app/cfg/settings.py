@@ -1,7 +1,7 @@
 from pydantic import Field
 from pydantic_settings import BaseSettings
 from yarl import URL
-class Config(BaseSettings):
+class Settings(BaseSettings):
     POSTGRES_HOST: str
     POSTGRES_PORT: int
     POSTGRES_USER: str
@@ -25,4 +25,4 @@ class Config(BaseSettings):
         print(url)
         return url
     
-config: Config = Config()
+settings: Settings = Settings()
