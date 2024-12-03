@@ -5,7 +5,7 @@ from sqlalchemy import pool
 
 from alembic import context
 from app.database.models.base import Base
-from app.cfg.config import config as cfg
+from app.cfg.settings import settings
 
 # User:
 from app.database.models.user import User
@@ -24,7 +24,7 @@ from app.database.models.project_objectives import ProjectObjectives
 from app.database.models.underobjectve import UnderObjective
 from app.database.models.objectve import Objective
 config = context.config
-config.set_main_option("sqlalchemy.url", f"{cfg.db_url}")
+config.set_main_option("sqlalchemy.url", f"{settings.db_url}")
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 
