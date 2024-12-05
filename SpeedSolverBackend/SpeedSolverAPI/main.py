@@ -1,4 +1,4 @@
-from app.cfg.settings import config
+from app.cfg.settings import settings
 from fastapi import FastAPI
 from app.routing.main_router import mainRouter
 from starlette.middleware.cors import CORSMiddleware
