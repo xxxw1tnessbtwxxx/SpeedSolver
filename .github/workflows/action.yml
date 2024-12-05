@@ -24,11 +24,11 @@ jobs:
 
       - name: Run Backend
         run: |
-          make backend
+          make build-backend
 
       - name: Run Frontend
         run: |
-          make frontend
+          make build-frontend
 
 
       

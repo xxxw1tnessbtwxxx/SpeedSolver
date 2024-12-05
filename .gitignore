@@ -2,6 +2,8 @@
 .vs
 .idea
 
+node_modules/
+
 __pycache__/
 SpeedSolverAPI/docker/docker-compose-dev.yml
 .vscode/
