@@ -7,22 +7,25 @@ from alembic import context
 from app.database.models.base import Base
 from app.cfg.settings import settings
 
+# Organization:
+from app.database.models.organization import Organization
+
 # User:
 from app.database.models.user import User
 from app.database.models.user_profile import UserProfile
 
 # Team:
 from app.database.models.team import Team
-from app.database.models.team_project import TeamProject
-from app.database.models.team_member import TeamMember
+from app.database.models.team_members import TeamMember
+from app.database.models.team_projects import TeamProject
 
 # Project:
-from app.database.models.project import Project
-from app.database.models.project_objectives import ProjectObjectives
+from app.database.models.projects import Project
 
-# Objective
-from app.database.models.underobjectve import UnderObjective
-from app.database.models.objectve import Objective
+# Objective:
+from app.database.models.objectives import Objective
+
+
 config = context.config
 config.set_main_option("sqlalchemy.url", f"{settings.db_url}")
 if config.config_file_name is not None:
