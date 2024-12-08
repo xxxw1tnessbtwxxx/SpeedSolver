@@ -20,3 +20,5 @@ class UserProfile(Base):
     patronymic: Mapped[str] = mapped_column(nullable=True)
     birthdate: Mapped[Date] = mapped_column(Date, nullable=True, default=datetime.date.today())
     userId: Mapped[UUID] = mapped_column(ForeignKey("users.userId"))
+
+    user: Mapped["User"] = relationship("User", back_populates="profile") # type: ignore

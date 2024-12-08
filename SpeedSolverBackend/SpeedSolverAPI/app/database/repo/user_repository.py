@@ -2,6 +2,12 @@ from sqlalchemy.orm import Session
 from ..abstract.abc_repo import AbstractRepository
 from ..models.user import User
 
+<<<<<<< HEAD
+from sqlalchemy import select, update, insert
+
+class UserRepository(AbstractRepository):
+    model = User
+=======
 from app.routing.security.cryptography import hash_password
 
 from app.schema.get_access.register import RegisterRequest
@@ -44,3 +50,4 @@ class UserRepository(AbstractRepository):
             raise Exception("Wrong credentialls")
 
         
+>>>>>>> e03ca8dc984babbd26e3731a014912049581482f
