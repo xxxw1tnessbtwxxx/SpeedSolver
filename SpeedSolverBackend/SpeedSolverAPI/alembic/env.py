@@ -4,26 +4,8 @@ from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 
 from alembic import context
-from app.database.models.base import Base
 from app.cfg.settings import settings
-
-# Organization:
-from app.database.models.organization import Organization
-
-# User:
-from app.database.models.user import User
-from app.database.models.user_profile import UserProfile
-
-# Team:
-from app.database.models.team import Team
-from app.database.models.team_members import TeamMember
-from app.database.models.team_projects import TeamProject
-
-# Project:
-from app.database.models.projects import Project
-
-# Objective:
-from app.database.models.objectives import Objective
+from app.database.models.models import Base
 
 
 config = context.config
