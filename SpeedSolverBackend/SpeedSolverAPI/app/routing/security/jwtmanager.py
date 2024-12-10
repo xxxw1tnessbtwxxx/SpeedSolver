@@ -14,7 +14,7 @@ from app.utils.result import Result
 from app.utils.logger.logger import logger
 from app.routing.security.hasher import verify_password
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/v1/access/authorize")
 
 class JWTManager:
 

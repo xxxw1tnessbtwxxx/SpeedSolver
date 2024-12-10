@@ -41,7 +41,4 @@ async def authorize(authRequest: OAuth2PasswordRequestForm = Depends(), session:
         access_token=authorized.value,
         token_type="Bearer"
     )
-@authRouter.post("/test")
-async def test(user: User = Depends(JWTManager().get_current_user)):
-    return user
     
