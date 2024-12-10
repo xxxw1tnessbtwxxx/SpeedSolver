@@ -3,7 +3,7 @@
 .idea
 
 node_modules/
-
+logs/
 __pycache__/
 SpeedSolverAPI/docker/docker-compose-dev.yml
 .vscode/
@@ -11,3 +11,4 @@ SpeedSolverAPI/docker/docker-compose-dev.yml
 *.pyc
 *.pyo
 *.pyd
+*.log
