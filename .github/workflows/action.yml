@@ -20,7 +20,7 @@ jobs:
 
       - name: Copy .env file
         run: |
-          echo "${{ secrets.DATABASE_URL }}" > .env
+          echo "${{ secrets.ENV_FILE }}" > .env
 
       - name: Run Backend
         run: |
