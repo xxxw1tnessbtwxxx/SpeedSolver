@@ -24,7 +24,6 @@ class Settings(BaseSettings):
             password=self.POSTGRES_PASSWORD,
             path=f"/{self.POSTGRES_DB}"
         )
-        print(url)
         return url
     
 settings: Settings = Settings()

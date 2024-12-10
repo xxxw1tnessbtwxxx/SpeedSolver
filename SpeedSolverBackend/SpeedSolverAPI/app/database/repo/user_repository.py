@@ -10,8 +10,8 @@ from sqlalchemy import select, update, insert
 class UserRepository(AbstractRepository):
     model = User
 
-    def authenticate_user(self, email: str, password: str) -> Result[None]:
-        user = UserRepository(self._session).get_by_filter_one(email=email)
+    async def authenticate_user(self, email: str, password: str) -> Result:
+        user = await UserRepository(self._session).get_by_filter_one(email=email)
         if not user:
             return Result(success=False, error="User not found")
         if not verify_password(password, user.password):

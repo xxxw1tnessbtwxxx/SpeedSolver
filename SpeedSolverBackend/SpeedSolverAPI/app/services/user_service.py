@@ -24,14 +24,15 @@ class UserService:
             log_info_with_separator(str(e))
             return Result(success=False, error="Some error while attemping resource.")
         
-    async def authorize(self, authorize_request: authorize.AuthorizeRequest) -> Result[None]:
-        authenticated: Result = JWTManager.authenticate_user(authorize_request.email, authorize_request.password)
+    async def authorize(self, session: Session, email: str, password: str) -> Result[None]:
+        authenticated: Result = await UserRepository(session).authenticate_user(email, password)
         if authenticated.error:
             return Result(success=False, error=authenticated.error)
         
-        payload = {
-            "id": authenticated.value.id,
+        payload: dict = {
+            "userId": str(authenticated.value.userId),
             "email": authenticated.value.email
         }
 
-        token = JWTManager.encode_token(payload)
+        token = JWTManager().encode_token(payload)
+        return Result(success=True, value=token)

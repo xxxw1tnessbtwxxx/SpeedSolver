@@ -22,6 +22,8 @@ py-automapper = "^1.2.3"
 pytest = "^8.3.4"
 bcrypt = "^4.2.1"
 pyjwt = "^2.10.1"
+jose = "^1.0.0"
+python-multipart = "^0.0.19"
 
 
 [build-system]

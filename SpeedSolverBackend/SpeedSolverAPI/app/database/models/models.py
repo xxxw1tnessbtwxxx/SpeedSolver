@@ -60,9 +60,11 @@ class Team(Base):
     teamId: Mapped[UUID] = mapped_column(UUID, primary_key=True, default=uuid.uuid4)
     title: Mapped[str] = mapped_column()
     description: Mapped[str] = mapped_column(nullable=True)
+    leaderId: Mapped[UUID] = mapped_column(ForeignKey("users.userId"), nullable=True)
     organizationId: Mapped[UUID] = mapped_column(ForeignKey("organizations.organizationId"), nullable=True)
 
     organization: Mapped["Organization"] = relationship("Organization", back_populates="teams") # type: ignore
+    leader: Mapped["User"] = relationship("User", back_populates="teams_lead")
     members: Mapped[list["TeamMember"]] = relationship("TeamMember", back_populates="team") # type: ignore
     projects: Mapped[list["TeamProject"]] = relationship("TeamProject", back_populates="team") # type: ignore
 
@@ -86,3 +88,4 @@ class User(Base):
 
     profile: Mapped["UserProfile"] = relationship("UserProfile", back_populates="user") # type: ignore
     teams: Mapped[List["TeamMember"]] = relationship("TeamMember", back_populates="user") # type: ignore
+    teams_lead: Mapped[List["Team"]] = relationship("Team", back_populates="leader")
