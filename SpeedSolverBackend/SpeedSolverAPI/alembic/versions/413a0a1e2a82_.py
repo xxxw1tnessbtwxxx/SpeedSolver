@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: 71e39764394a
+Revision ID: 413a0a1e2a82
 Revises: 
-Create Date: 2024-12-08 15:05:10.505743
+Create Date: 2024-12-09 18:43:34.141451
 
 """
 from typing import Sequence, Union
@@ -12,7 +12,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = '71e39764394a'
+revision: str = '413a0a1e2a82'
 down_revision: Union[str, None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
@@ -24,6 +24,8 @@ def upgrade() -> None:
     sa.Column('objectiveId', sa.UUID(), nullable=False),
     sa.Column('title', sa.String(), nullable=False),
     sa.Column('description', sa.String(), nullable=True),
+    sa.Column('parent_objectiveId', sa.UUID(), nullable=True),
+    sa.ForeignKeyConstraint(['parent_objectiveId'], ['objectives.objectiveId'], ),
     sa.PrimaryKeyConstraint('objectiveId')
     )
     op.create_table('organizations',
@@ -40,10 +42,11 @@ def upgrade() -> None:
     )
     op.create_table('users',
     sa.Column('userId', sa.UUID(), nullable=False),
-    sa.Column('password', sa.String(), nullable=False),
     sa.Column('email', sa.String(), nullable=True),
-    sa.Column('registered', sa.DATE(), nullable=True),
-    sa.PrimaryKeyConstraint('userId')
+    sa.Column('password', sa.String(), nullable=False),
+    sa.Column('registered', sa.Date(), nullable=True),
+    sa.PrimaryKeyConstraint('userId'),
+    sa.UniqueConstraint('email')
     )
     op.create_table('teams',
     sa.Column('teamId', sa.UUID(), nullable=False),
