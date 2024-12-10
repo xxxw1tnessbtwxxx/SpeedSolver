@@ -1,3 +1,4 @@
+from fastapi import Depends, HTTPException
 from fastapi.security import OAuth2PasswordBearer
 import jwt
 from app.cfg.settings import settings
@@ -20,17 +21,27 @@ class JWTManager:
         jwt_payload = payload.copy().update({"exp": self.EXPIRES_AT * 60})
         return jwt.encode(jwt_payload, self.SECRET_KEY, algorithm=self.ALGORITHM)
     
-    @staticmethod
-    def authenticate_user(email: str, password: str) -> Result[None]:
-        with get_session() as session:
-            user = UserRepository(session).get_by_filter_one(email=email)
-            if not user:
-                return Result(success=False, error="User not found")
-            if not verify_password(password, user.password):
-                return Result(success=False, error="Invalid password")
-            return Result(success=True, value=user)
-        
     
-    @staticmethod
+    @classmethod
     def decode_token(token: str) -> dict:
         return jwt.decode(token, settings.JWT_SECRET_KEY, algorithms=[settings.JWT_ALGORITHM])
+    
+    @classmethod
+    async def get_current_user(self, token: str = Depends(oauth2_scheme)):
+        credentials_exception = HTTPException(
+            status_code=401,
+            detail="Could not validate credentials",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+        try:
+            payload = jwt.decode(token, self.SECRET_KEY, algorithms=[self.ALGORITHM])
+            username: str = payload.get("sub")
+            if username is None:
+                raise credentials_exception
+            token_data = TokenData(username=username)
+        except JWTError:
+            raise credentials_exception
+        user = get_user(fake_users_db, username=token_data.username)
+        if user is None:
+            raise credentials_exception
+        return user
