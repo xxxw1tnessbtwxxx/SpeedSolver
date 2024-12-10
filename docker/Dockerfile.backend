@@ -14,7 +14,7 @@ RUN pip install poetry==1.8.2
 WORKDIR /app/speedsolver
 
 # Копируем pyproject.toml и poetry.lock
-COPY SpeedSolverBackend/SpeedSolverAPI/pyproject.toml SpeedSolverBackend/SpeedSolverAPI/pypoetry.lock /app/speedsolver/
+COPY SpeedSolverBackend/SpeedSolverAPI/pyproject.toml SpeedSolverBackend/SpeedSolverAPI/poetry.lock /app/speedsolver/
 
 # Настраиваем Poetry
 RUN poetry config virtualenvs.create false
