@@ -34,7 +34,6 @@ class JWTManager:
         return jwt.decode(token, settings.JWT_SECRET_KEY, algorithms=[settings.JWT_ALGORITHM])
     
     async def get_current_user(self, token: str = Depends(oauth2_scheme), session: Session = Depends(get_session)):
-        logger.info("asjkaskjdasjk")
         credentials_exception = HTTPException(
             status_code=401,
             detail="Could not validate credentials",
@@ -42,9 +41,7 @@ class JWTManager:
         )
         
         payload = self.decode_token(token)
-        logger.info(payload)
         username: str = payload.get("userId")
-        logger.info(username)
         if username is None:
             logger.warning("user is none")
             raise credentials_exception
