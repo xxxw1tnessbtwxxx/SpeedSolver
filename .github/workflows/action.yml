@@ -20,15 +20,10 @@ jobs:
 
       - name: Copy .env file
         run: |
-          echo "${{ secrets.ENV_FILE }}" > .env
+          echo "${{ secrets.ENV_FILE }}" > SpeedSolverBackend\SpeedSolverAPI\.env
 
       - name: Run Backend
         run: |
           make build-backend
-
-      - name: Run Frontend
-        run: |
-          make build-frontend
-
 
       
