@@ -1,4 +1,5 @@
 
+from sqlalchemy.exc import IntegrityError
 from app.database.repo.user_repository import UserRepository
 from sqlalchemy.orm import Session
 from app.schema.request.get_access import authorize, register
@@ -14,5 +15,7 @@ class UserService:
         try:
             user = await self._repo.create(email=register_request.email, password=hash_password(register_request.password))
             return Result(success=True, value=user)
-        except:
+        except IntegrityError as e:
             return Result(success=False, error="User already exists")
+        except Exception as e:
+            return Result(success=False, error="Some error while attemping resource.")

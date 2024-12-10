@@ -5,6 +5,7 @@ from app.services.user_service import UserService
 from app.schema.request.get_access.register import RegisterRequest
 from app.utils.result import Result
 
+from app.utils.logger.logger import logger
 
 from ..database.database import get_session
 from sqlalchemy.orm import Session
@@ -17,4 +18,5 @@ async def register(registerRequest: RegisterRequest, session: Session = Depends(
     if not registered.success:
         raise HTTPException(status_code=400, detail=registered.error)
     
+    logger.info(f"User {registered.value.email} registered")
     return registered.value
