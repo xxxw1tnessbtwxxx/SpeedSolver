@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, Form, HTTPException
 from fastapi.security import OAuth2PasswordRequestForm
 
 from app.database.models.models import User
@@ -13,7 +13,7 @@ from app.database.database import get_session
 
 
 
-from app.routing.security.jwtmanager import JWTManager
+from app.routing.security.jwtmanager import JWTManager, oauth2_scheme
 
 from sqlalchemy.orm import Session
 
@@ -32,8 +32,8 @@ async def register(registerRequest: RegisterRequest, session: Session = Depends(
 
 
 @authRouter.post("/authorize")
-async def authorize(authRequest: OAuth2PasswordRequestForm = Depends(), session: Session = Depends(get_session)):
-    authorized: Result = await UserService(session).authorize(session, authRequest.username, authRequest.password)
+async def authorize(username: str = Form(), password: str = Form(), session: Session = Depends(get_session)):
+    authorized: Result = await UserService(session).authorize(username, password)
     if not authorized.success:
         raise HTTPException(status_code=400, detail=authorized.error)
 
@@ -41,4 +41,8 @@ async def authorize(authRequest: OAuth2PasswordRequestForm = Depends(), session:
         access_token=authorized.value,
         token_type="Bearer"
     )
+
+@authRouter.delete("/deleteprofile")
+async def delete_profile(token: str = Depends(oauth2_scheme), session: Session = Depends(get_session)):
+    return await UserService(session).delete_profile(token)
     
