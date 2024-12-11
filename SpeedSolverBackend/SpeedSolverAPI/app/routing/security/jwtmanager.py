@@ -25,7 +25,6 @@ class JWTManager:
 
     def encode_token(self, payload):
         jwt_payload = payload.copy()
-        print(jwt_payload)
         jwt_payload.update({"exp": datetime.datetime.utcnow() + timedelta(hours=self.EXPIRES_AT)})
         return jwt.encode(jwt_payload, self.SECRET_KEY, algorithm=self.ALGORITHM)
     
@@ -33,7 +32,7 @@ class JWTManager:
     def decode_token(self, token: str) -> dict:
         return jwt.decode(token, settings.JWT_SECRET_KEY, algorithms=[settings.JWT_ALGORITHM])
     
-    async def get_current_user(self, token: str = Depends(oauth2_scheme), session: Session = Depends(get_session)):
+    async def get_current_user(self, token: str, session: Session):
         credentials_exception = HTTPException(
             status_code=401,
             detail="Could not validate credentials",

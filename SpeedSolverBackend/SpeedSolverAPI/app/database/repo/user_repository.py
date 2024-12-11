@@ -5,7 +5,7 @@ from app.utils.result import Result
 from ..abstract.abc_repo import AbstractRepository
 from app.database.models.models import User
 
-from sqlalchemy import select, update, insert
+from sqlalchemy import CursorResult, delete, select, update, insert
 
 class UserRepository(AbstractRepository):
     model = User
@@ -17,3 +17,8 @@ class UserRepository(AbstractRepository):
         if not verify_password(password, user.password):
             return Result(success=False, error="Invalid password")
         return Result(success=True, value=user)
+    
+    async def delete_by_id(self, id):
+        result = self._session.execute(delete(self.model).where(self.model.userId == id))
+        self._session.commit()
+        return result.rowcount
