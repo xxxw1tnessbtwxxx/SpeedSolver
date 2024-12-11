@@ -14,7 +14,7 @@ class TeamRepository(AbstractRepository):
             .where(
                 and_(
                     self.model.title == title,
-                    self.leaderId == leaderId
+                    self.model.leaderId == leaderId
                 )
             )
         )

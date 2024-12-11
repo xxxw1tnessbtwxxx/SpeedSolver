@@ -5,4 +5,4 @@ import uuid
 class CreateTeam(BaseModel):
     name: str
     description: Optional[str]
-    organizationId: Optional[uuid.UUID]
+    organizationId: Optional[uuid.UUID] = None
