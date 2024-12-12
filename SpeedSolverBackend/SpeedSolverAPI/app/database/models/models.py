@@ -89,3 +89,17 @@ class User(Base):
     profile: Mapped["UserProfile"] = relationship("UserProfile", back_populates="user") # type: ignore
     teams: Mapped[List["TeamMember"]] = relationship("TeamMember", back_populates="user") # type: ignore
     teams_lead: Mapped[List["Team"]] = relationship("Team", back_populates="leader")
+
+    team_invitations: Mapped[List["TeamInvitation"]] = relationship("TeamInvitation", back_populates="invited_user", foreign_keys="[TeamInvitation.invited_user_id]")
+    
+
+class TeamInvitation(Base):
+    __tablename__ = "team_invitations"
+    teamInvitationId: Mapped[UUID] = mapped_column(UUID, primary_key=True, default=uuid.uuid4)
+    invited_user_id: Mapped[UUID] = mapped_column(ForeignKey("users.userId"))
+    invited_by_leader_id: Mapped[UUID] = mapped_column(ForeignKey("users.userId"))
+    teamId: Mapped[UUID] = mapped_column(ForeignKey("teams.teamId"))
+
+    invited_user: Mapped["User"] = relationship("User", back_populates="team_invitations", foreign_keys="[TeamInvitation.invited_user_id]")
+    invited_by_leader: Mapped["User"] = relationship("User", foreign_keys="[TeamInvitation.invited_by_leader_id]")
+    team: Mapped["Team"] = relationship("Team")
