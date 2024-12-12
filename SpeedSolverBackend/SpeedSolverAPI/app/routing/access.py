@@ -17,7 +17,7 @@ from app.routing.security.jwtmanager import JWTManager, oauth2_scheme
 
 from sqlalchemy.orm import Session
 
-authRouter = APIRouter(prefix="/access", tags=["Auth"])
+authRouter = APIRouter(prefix="/access", tags=["System Access"])
 
 @authRouter.post("/register")
 async def register(registerRequest: RegisterRequest, session: Session = Depends(get_session)):
@@ -42,7 +42,4 @@ async def authorize(username: str = Form(), password: str = Form(), session: Ses
         token_type="Bearer"
     )
 
-@authRouter.delete("/deleteprofile")
-async def delete_profile(token: str = Depends(oauth2_scheme), session: Session = Depends(get_session)):
-    return await UserService(session).delete_profile(token)
     

@@ -9,10 +9,10 @@ from app.routing.security.jwtmanager import JWTManager, oauth2_scheme
 
 
 from app.schema.request.team.create_team import CreateTeam
-team_router = APIRouter(prefix="/team", tags=["Team"])
+team_router = APIRouter(prefix="/team", tags=["Teams management"])
 
 
-@team_router.post("/create")
+@team_router.post("/create", summary="Создать команду")
 async def create_team(createRequest: CreateTeam, token: str = Depends(oauth2_scheme), session: Session = Depends(get_session)):
     created = await TeamService(session).create_team(createRequest, token)
 
@@ -24,7 +24,7 @@ async def create_team(createRequest: CreateTeam, token: str = Depends(oauth2_sch
     
     return created.value
 
-@team_router.post("/update")
+@team_router.post("/update", summary="Обновить команду")
 async def update_team(updateRequest: UpdateTeam, token: str = Depends(oauth2_scheme), session: Session = Depends(get_session)):
     updated = await TeamService(session).update_team(updateRequest, token)
 
