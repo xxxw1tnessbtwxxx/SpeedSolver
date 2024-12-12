@@ -57,7 +57,9 @@ class TeamRepository(AbstractRepository):
         try:
             result = self._session.execute(query)
             await self.commit()
-            logger.info(f"Team {result.scalars().first().title} updated.")
+            logger.info(f"Team {teamId} has updated by {leaderId}")
         except Exception as e:
             return Result(success=False, error=str(e))
-        return Result(success=True, value=result.scalars().first())
+        return Result(success=True, value={
+            "msg": "success"
+        })
