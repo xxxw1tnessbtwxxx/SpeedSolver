@@ -10,3 +10,7 @@ class Result(Generic[T]):
         self.success = success
         self.value = value
         self.error = error
+
+def err(msg: str) -> Result[None]: return Result(success=False, error=msg)
+
+def success(value: T) -> Result[T]: return Result(success=True, value=value)

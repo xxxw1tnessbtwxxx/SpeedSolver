@@ -2,7 +2,7 @@ from app.database.abstract.abc_repo import AbstractRepository
 from app.database.models.models import Team
 from sqlalchemy import select, update, delete, insert, and_, or_
 from app.utils.logger.logger import logger
-from app.utils.result import Result
+from app.utils.result import Result, err, success
 class TeamRepository(AbstractRepository):
     model: Team = Team
 
@@ -28,10 +28,10 @@ class TeamRepository(AbstractRepository):
         team = result.scalars().first()
 
         if team:
-            return Result(success=False, error="Team already exists")
+            return err(error="Team already exists")
         
 
-        return Result(success=True, value = await self.create(title=title, description=description, leaderId=leaderId, organizationId=organizationId))
+        return success(value = await self.create(title=title, description=description, leaderId=leaderId, organizationId=organizationId))
     
     async def update_team(self, 
                           teamId: str, 
@@ -59,7 +59,7 @@ class TeamRepository(AbstractRepository):
             await self.commit()
             logger.info(f"Team {teamId} has updated by {leaderId}")
         except Exception as e:
-            return Result(success=False, error=str(e))
-        return Result(success=True, value={
+            return err(error=str(e))
+        return success(value={
             "msg": "success"
         })
