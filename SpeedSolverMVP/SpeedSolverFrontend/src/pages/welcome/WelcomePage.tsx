@@ -1,11 +1,27 @@
 import PrimaryButton from "../../components/primaryButton/PrimaryButton"
 import styles from "./WelcomePage.module.css"
 import "../../swalfire.css"
-import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Swal from "sweetalert2";
+import axios from "axios";
+import API_URL from "../../types/api/api";
+import { ToastContainer } from "react-toastify";
 const WelcomePage = () => {
     
+    const authorize = async () => {
+        const response = await axios.post(`${API_URL()}/access/authorize`, {
+            'username': 'string',
+            'password': 'string'
+        }, {
+            headers: {
+                'accept': 'application/json',
+                'Content-Type': 'application/x-www-form-urlencoded',
+            }
+        })
+
+        console.log(response.data)
+        
+    }
+
     return (
         <div className={styles.container}>
 
@@ -15,21 +31,8 @@ const WelcomePage = () => {
             </div>
 
             <div className={styles.contentButtons}>
-                <PrimaryButton text="Авторизоваться" onClick={() => {
-                    toast.success("asd", {
-                        position: "top-right",
-                        autoClose: 5000,
-                        hideProgressBar: false
-                    })
-                }}/>
-                <PrimaryButton text="Зарегистрироваться" onClick={() => {
-                    Swal.fire({
-                        title: 'Авторизация',
-                        text: 'В разработке',
-                        icon: 'info',
-                        confirmButtonText: 'OK'     
-                    })
-                }}/>
+                <PrimaryButton text="Авторизоваться" onClick={authorize}/>
+                <PrimaryButton text="Зарегистрироваться"/>
             </div>
             <ToastContainer/>
         </div>

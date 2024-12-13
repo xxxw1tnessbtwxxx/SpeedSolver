@@ -38,8 +38,7 @@ p {
 
 @media (max-width: 320px), (max-width: 480px), (max-width: 600px) {
     .container {
-        background-size: cover;
-        background-position: center;
+        background-image: url("../../assets/mobile_background.svg");
     }
 
     .contentButtons {
