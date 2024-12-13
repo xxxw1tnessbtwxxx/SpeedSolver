@@ -34,6 +34,6 @@ class UserProfileRepository(AbstractRepository):
         profile = result.scalars().one_or_none()
         if not profile:
             creating = await self.create(userId=userId, surname=surname, name=name, patronymic=patronymic, birthdate=birthdate)  
-            return success(creating) if creating else err(error="Some error while attemping resource.")
+            return success(creating) if creating else err("Some error while attemping resource.")
         return success(await self.update(userId=userId, surname=surname, name=name, patronymic=patronymic, birthdate=birthdate))
 

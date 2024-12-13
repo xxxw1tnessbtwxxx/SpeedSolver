@@ -1,19 +1,19 @@
 # SPEEDSOLVER
 
-# PUBLIC:
+
 - https://speedsolver.ru/ - основной сайт.
 - https://api.speedsolver.ru/docs - документация к API
 
 ## Описание
 
-***SPEEDSOLVER*** — это **SaaS** система управления проектами, предназначенная для эффективного управления командами, проектами, задачами, подзадачами и дедлайнами. Проект помогает командам организовать свою работу, отслеживать прогресс и достигать поставленных целей в срок.
+***SPEEDSOLVER*** — это система управления проектами, предназначенная для эффективного управления командами, проектами, задачами, подзадачами и дедлайнами. Проект помогает командам организовать свою работу, отслеживать прогресс и достигать поставленных целей в срок.
 
 ## Содержание
 
 - [Описание](#описание)
 - [Функции](#функции)
 - [Стек технологий](#стек-технологий)
-- [Установка](#установка)
+- [Установка и запуск](#установка)
 - [Лицензия](#лицензия)
 
 ## Функции
@@ -27,37 +27,48 @@
 
 ## Стек технологий
 
-- **Frontend**: React.js
-- **Backend**: Python - FastAPI, Python WebSockets
-- **Mobile** Swift - Storyboard
+- **Frontend**: React.js + Tailwind CSS + SweetAlert2
+- **Backend**: Python - FastAPI, Pydantic
+- **Mobile** Swift
 - **Object Relational Mapping**: Python SQLAlchemy + Alembic
 - **База данных**: PostgreSQL
-- **Аутентификация & Авторизация**: JWT (JSON Web Tokens)
+- **Аутентификация & Авторизация**: JWT (JSON Web Tokens) - pyjwt/jose
+- **Тестирование Backend**: Python - pytest
 - **Дополнительно**:
-   - Docker – контейнеризация/рзавертывание приложения.
-   - Redis – Кэш-хранилище.
+   - Docker – контейнеризация приложения.
    - Nginx - Веб-сервер для проксирования внешних подключений путем **reverse proxy**, реализация защищенного соединения с **SSL/TLS**, проксирование поддоменов.
    - Github Actions (CI/CD) – непрерывная интеграция и непрерывная доставка.
 
-## Установка
+## Установка и запуск
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/xxxw1tnessbtwxxx/SpeedSolver.git
-
-2. Необходимо переназначить порты в файлах **SpeedSolverAPI/docker/docker-compose.yml, SpeedSolverFrontend/docker-compose.web.yml, WebSocket/Dockerfile** в случае, если у вас заняты:
-   - API:HTTP - 5678
-   - PostgreSQL - 5435
-   - WebSocket Server - 8765
-   - Redis Instance - 6379
+   git clone https://github.com/w1tnessbtwwwww/SpeedSolver.git
+2. Необходимо создать файл **.env** и заполнить его из **.env.example**.
+3. Необходимо переназначить порты в файле **.env** в случае, если у вас заняты одни из назначенных вами.
 4. Запустите Docker Engine на вашем компьютере или виртуальной машине.
-5. Запустите контейнер Docker:
-   ```bash
-   cd SpeedSolver/SpeedSolverAPI 
-   make run (при использовании macOS/Linux)
-   docker-compose up --build -d (при использовании Windows)
+5. Запустите контейнеры Docker с **Backend** и **Frontend** частью:
+- macOS/Linux:
+   ```shell
+   make build-backend
+   make build-frontend
+   ```
+   
+- Windows:
+  - При наличии утилиты **make** от **chocolatey**:
+   ```shell
+   make build-backend
+   make build-frontend
+   ```
+   - В ином случае:
+   ```shell
+   docker-compose --env-file SpeedSolverBackend/SpeedSolverAPI/.env -f SpeedSolverBackend/SpeedSolverAPI/docker/docker-compose.backend.yml --project-directory SpeedSolverBackend/SpeedSolverAPI up --build -d
 
-Документация к API будет создана автоматически с помощью Swagger UI. Получить документацию можно по адресу: https://your-ip:your-port/swagger/index.html
+   docker-compose -f docker/docker-compose.frontend.yml --project-directory . up --build
+   ```
+После выполнения всех вышеперечисленных шагов вы сможете получить доступ к:
+   - Backend - http://localhost:port/docs, запросы - https://localhost:port/v1/...
+   - Frontend - http://localhost:port/
 
 ## Лицензия
 Этот проект лицензирован по лицензии Apache License 2.0. Подробности см. в файле [LICENSE](https://github.com/w1tnessbtwwwww/SpeedSolver/blob/master/LICENSE).

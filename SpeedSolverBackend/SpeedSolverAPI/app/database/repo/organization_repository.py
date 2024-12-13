@@ -13,7 +13,7 @@ class OrganizationRepository(AbstractRepository):
     model = Organization
 
 
-    async def create_organization(self, **kwargs):
+    async def create_organization(self, **kwargs) -> Result[None]:
         try:
             query = (
                 select(self.model)
