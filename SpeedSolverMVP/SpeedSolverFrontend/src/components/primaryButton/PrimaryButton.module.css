@@ -3,7 +3,7 @@
 .primaryButton {
     background-color: #B4CBDB; /* Green */
     border: none;
-    width: 150px;
+    width: auto;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -18,4 +18,12 @@
 
 .primaryButton:hover {
     background-color: #9CB2C0;
+}
+
+@media (max-width: 320px), (max-width: 480px), (max-width: 600px) {
+    .primaryButton {
+        font-size: 15px;
+        width: 200px;
+        text-align: center;
+    }
 }
