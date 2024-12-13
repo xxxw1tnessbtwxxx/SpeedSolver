@@ -24,7 +24,8 @@ class Organization(Base):
     organizationId: Mapped[UUID] = mapped_column(UUID, primary_key=True, default=uuid.uuid4)
     title: Mapped[str] = mapped_column()
     description: Mapped[str] = mapped_column(nullable=True)
-
+    leaderId: Mapped[UUID] = mapped_column(ForeignKey("users.userId", ondelete="CASCADE"), nullable=False)
+    leader: Mapped["User"] = relationship("User", back_populates="organizations")
     teams: Mapped[List["Team"]] = relationship("Team", back_populates="organization") # type: ignore
 
 class Project(Base):
@@ -61,7 +62,7 @@ class Team(Base):
     title: Mapped[str] = mapped_column()
     description: Mapped[str] = mapped_column(nullable=True)
     leaderId: Mapped[UUID] = mapped_column(ForeignKey("users.userId"), nullable=True)
-    organizationId: Mapped[UUID] = mapped_column(ForeignKey("organizations.organizationId"), nullable=True)
+    organizationId: Mapped[UUID] = mapped_column(ForeignKey("organizations.organizationId", ondelete="SET NULL"), nullable=True)
 
     organization: Mapped["Organization"] = relationship("Organization", back_populates="teams") # type: ignore
     leader: Mapped["User"] = relationship("User", back_populates="teams_lead")
@@ -86,11 +87,13 @@ class User(Base):
     password: Mapped[str] = mapped_column()
     registered: Mapped[Date] = mapped_column(Date, default=datetime.date.today(), nullable=True)
 
-    profile: Mapped["UserProfile"] = relationship("UserProfile", back_populates="user") # type: ignore
-    teams: Mapped[List["TeamMember"]] = relationship("TeamMember", back_populates="user") # type: ignore
+    profile: Mapped["UserProfile"] = relationship("UserProfile", back_populates="user", cascade="all, delete-orphan") # type: ignore
+    teams: Mapped[List["TeamMember"]] = relationship("TeamMember", back_populates="user", cascade="all, delete-orphan") # type: ignore
     teams_lead: Mapped[List["Team"]] = relationship("Team", back_populates="leader")
 
-    team_invitations: Mapped[List["TeamInvitation"]] = relationship("TeamInvitation", back_populates="invited_user", foreign_keys="[TeamInvitation.invited_user_id]")
+    team_invitations: Mapped[List["TeamInvitation"]] = relationship("TeamInvitation", back_populates="invited_user", foreign_keys="[TeamInvitation.invited_user_id]", cascade="all, delete-orphan")
+
+    organizations: Mapped[List["Organization"]] = relationship("Organization", back_populates="leader")
     
 
 class TeamInvitation(Base):
