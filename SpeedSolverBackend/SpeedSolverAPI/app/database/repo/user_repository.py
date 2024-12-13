@@ -1,11 +1,11 @@
 from sqlalchemy.orm import Session
 
 from app.routing.security.hasher import verify_password
-from app.utils.result import Result
+from app.utils.result import Result, err, success
 from ..abstract.abc_repo import AbstractRepository
 from app.database.models.models import User
 
-from sqlalchemy import select, update, insert
+from sqlalchemy import CursorResult, delete, select, update, insert
 
 class UserRepository(AbstractRepository):
     model = User
@@ -13,7 +13,15 @@ class UserRepository(AbstractRepository):
     async def authenticate_user(self, email: str, password: str) -> Result:
         user = await UserRepository(self._session).get_by_filter_one(email=email)
         if not user:
-            return Result(success=False, error="User not found")
+            return err("User not found")
         if not verify_password(password, user.password):
-            return Result(success=False, error="Invalid password")
-        return Result(success=True, value=user)
+            return err(error="Invalid password")
+        return success(user)
+    
+    async def delete_by_id(self, id):
+        try:
+            result = self._session.execute(delete(self.model).where(self.model.userId == id))
+            self._session.commit()
+            return success(result.rowcount)
+        except Exception as e:
+            return err(str(e))
