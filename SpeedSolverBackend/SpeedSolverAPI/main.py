@@ -1,6 +1,6 @@
 from app.cfg.settings import settings
 from fastapi import FastAPI
-from app.routing.main_router import mainRouter
+from app.routing.main_router import main_router
 from starlette.middleware.cors import CORSMiddleware
 
 
@@ -21,7 +21,7 @@ api.add_middleware (
     allow_headers=["*"]
 )
 
-api.include_router(mainRouter)
+api.include_router(main_router)
 
 if __name__ == "__main__":
     ...

@@ -17,9 +17,9 @@ from app.routing.security.jwtmanager import JWTManager, oauth2_scheme
 
 from sqlalchemy.orm import Session
 
-authRouter = APIRouter(prefix="/access", tags=["System Access"])
+auth_router = APIRouter(prefix="/access", tags=["System Access"])
 
-@authRouter.post("/register")
+@auth_router.post("/register")
 async def register(registerRequest: RegisterRequest, session: Session = Depends(get_session)):
     registered: Result = await UserService(session).register(registerRequest)
     if not registered.success:
@@ -31,7 +31,7 @@ async def register(registerRequest: RegisterRequest, session: Session = Depends(
     }
 
 
-@authRouter.post("/authorize")
+@auth_router.post("/authorize")
 async def authorize(username: str = Form(), password: str = Form(), session: Session = Depends(get_session)):
     authorized: Result = await UserService(session).authorize(username, password)
     if not authorized.success:
