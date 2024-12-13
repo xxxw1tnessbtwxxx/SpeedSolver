@@ -26,4 +26,8 @@ jobs:
         run: |
           make build-backend
 
+      - name: Run Frontend
+        run: |
+          make build-frontend
+
       
