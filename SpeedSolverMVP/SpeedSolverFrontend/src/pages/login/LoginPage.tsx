@@ -7,7 +7,7 @@ const LoginPage = () => {
         <>
             <div className="centered">
                 <div className={styles.formBorder}>
-                    <div>
+                    <div className="mediaText">
                         <h3>Авторизация</h3>
                         <p>Авторизуйтесь, используя свой логин и пароль.</p>
                     </div>
