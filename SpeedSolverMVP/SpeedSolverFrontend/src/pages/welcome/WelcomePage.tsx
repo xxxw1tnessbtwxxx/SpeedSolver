@@ -2,25 +2,8 @@ import PrimaryButton from "../../components/primaryButton/PrimaryButton"
 import styles from "./WelcomePage.module.css"
 import "../../swalfire.css"
 import 'react-toastify/dist/ReactToastify.css';
-import axios from "axios";
-import API_URL from "../../types/api/api";
-import { ToastContainer } from "react-toastify";
+import { Link } from "react-router-dom";
 const WelcomePage = () => {
-    
-    const authorize = async () => {
-        const response = await axios.post(`${API_URL()}/access/authorize`, {
-            'username': 'string',
-            'password': 'string'
-        }, {
-            headers: {
-                'accept': 'application/json',
-                'Content-Type': 'application/x-www-form-urlencoded',
-            }
-        })
-
-        console.log(response.data)
-        
-    }
 
     return (
         <div className={styles.container}>
@@ -31,10 +14,13 @@ const WelcomePage = () => {
             </div>
 
             <div className={styles.contentButtons}>
-                <PrimaryButton text="Авторизоваться" onClick={authorize}/>
-                <PrimaryButton text="Зарегистрироваться"/>
+                <Link to="/login">
+                    <PrimaryButton text="Авторизоваться"/>
+                </Link>
+                <Link to="/register">
+                    <PrimaryButton text="Зарегистрироваться"/>
+                </Link>
             </div>
-            <ToastContainer/>
         </div>
     )
 }
