@@ -11,10 +11,28 @@
     transition: border-color 0.3s ease;
 }
 
+.mediaText {
+    font-family: 'Inter';
+}
+
 .defaultInput:focus {
     border-color: #007bff; /* Цвет границы при фокусе */
 }
   
 .defaultInput::placeholder {
     color: #aaa;
+}
+
+
+@media (max-width: 320px), (max-width: 480px), (max-width: 600px) {
+
+    .mediaText {
+        hyphens: auto;
+    }
+
+    .defaultInput {
+        font-size: 15px;
+        width: 200px;
+        text-align: start;
+    }
 }
