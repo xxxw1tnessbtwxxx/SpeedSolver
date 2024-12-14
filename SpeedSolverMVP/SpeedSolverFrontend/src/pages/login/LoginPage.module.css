@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.formBorder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vh;
+    height: 30vh;
+    flex-direction: column;
+    font-family: 'Inter';
+    border: 3px solid #B4CBDB;
+    border-radius: 15px;
+    padding: 20px;
+    gap: 20px;
+    text-align: center;
+}
+
+
+.mainForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
