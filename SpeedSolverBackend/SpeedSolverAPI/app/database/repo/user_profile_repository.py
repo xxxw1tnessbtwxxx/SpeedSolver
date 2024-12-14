@@ -6,7 +6,7 @@ from ..abstract.abc_repo import AbstractRepository
 from app.database.models.models import UserProfile
 from datetime import datetime
 from sqlalchemy import CursorResult, delete, select, update, insert
-
+from typing import Optional
 
 class UserProfileRepository(AbstractRepository):
     model = UserProfile
@@ -19,10 +19,10 @@ class UserProfileRepository(AbstractRepository):
 
     async def update_profile(self, 
                              userId: str,
-                             surname: str = None,
-                             name: str = None,
-                             patronymic: str = None,
-                             birthdate: datetime = None
+                             surname: Optional[str],
+                             name: Optional[str],
+                             patronymic: Optional[str],
+                             birthdate: Optional[datetime]
                              ) -> Result[None]:
         
         query = (

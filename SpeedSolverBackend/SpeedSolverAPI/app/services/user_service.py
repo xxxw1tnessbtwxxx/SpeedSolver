@@ -1,14 +1,21 @@
 
 from sqlalchemy.exc import IntegrityError
+from sqlalchemy.orm import Session
+
 from app.database.models.models import User
 from app.database.repo.user_repository import UserRepository
-from sqlalchemy.orm import Session
+
 from app.schema.request.get_access import authorize, register
 from app.schema.request.account.updateprofile import UpdateProfile
+from app.schema.response.AccessToken import AccessToken
+
 from app.utils.result import Result, err, success
+from app.utils.logger.logger import logger, log_info_with_separator
+
 from app.routing.security.hasher import hash_password, verify_password
 from app.routing.security.jwtmanager import JWTManager
-from app.utils.logger.logger import logger, log_info_with_separator
+from app.routing.security.jwttype import JWTType
+
 
 class UserService:
 
@@ -31,7 +38,7 @@ class UserService:
             log_info_with_separator(str(e))
             return success("Some error while attemping resource.")
         
-    async def authorize(self, email: str, password: str) -> Result[None]:
+    async def authorize(self, email: str, password: str) -> Result[AccessToken]:
         authenticated: Result = await self._repo.authenticate_user(email, password)
         if authenticated.error:
             return err(authenticated.error)
@@ -41,7 +48,12 @@ class UserService:
             "email": authenticated.value.email
         }
 
-        return success(JWTManager().encode_token(payload))
+        jwt_manager = JWTManager()
+        return success(AccessToken(
+            access_token=jwt_manager.encode_token(payload, token_type=JWTType.ACCESS),
+            refresh_token=jwt_manager.encode_token(payload, token_type=JWTType.REFRESH),
+            token_type="Bearer"
+        ))
 
     async def delete_profile(self, token: str):
         user: User = await JWTManager().get_current_user(token, self._session)
