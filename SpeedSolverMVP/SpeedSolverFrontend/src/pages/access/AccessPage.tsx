@@ -50,7 +50,7 @@ const AccessPage: React.FC<AuthTypeProp> = ({ action }) => {
         }
 
         try {
-            var response = await axios.post(`${API_URL()}/access/authorize`, data, { headers: headers })
+            var response = await axios.post(`${API_URL()}/access/authorize`, data, { headers: headers, withCredentials: true })
             return response
         }
         catch(error) {
