@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom"
 import WelcomePage from "./pages/welcome/WelcomePage"
 import AccessPage from "./pages/access/AccessPage"
 import AuthorizationType from "./types/enums/AuthorizationType"
+
 function App() {
   return (
     <Routes>

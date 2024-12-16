@@ -1,7 +1,4 @@
-
-
 const BASE_URL = "https://api.speedsolver.ru/"
-
 const API_VERSION = "v1"
 
 const API_URL = () => {
