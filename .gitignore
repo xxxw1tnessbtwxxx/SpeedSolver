@@ -12,3 +12,6 @@ SpeedSolverAPI/docker/docker-compose-dev.yml
 *.pyo
 *.pyd
 *.log
+
+localhost.pem
+localhost-key.pem
