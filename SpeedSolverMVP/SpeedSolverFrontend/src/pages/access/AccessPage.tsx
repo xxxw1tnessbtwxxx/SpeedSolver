@@ -6,7 +6,7 @@ import PrimaryButton from "../../components/primaryButton/PrimaryButton"
 import styles from "./AccessPage.module.css"
 import AuthorizationType from "../../types/enums/AuthorizationType"
 import Swal from "sweetalert2"
-import { ToastContainer } from "react-toastify"
+
 
 interface AuthTypeProp {
     action: AuthorizationType
