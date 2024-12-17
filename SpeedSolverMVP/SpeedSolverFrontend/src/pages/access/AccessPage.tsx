@@ -1,15 +1,12 @@
-import React, { useState } from "react"
+import React from "react"
 import "../../anystyles/centeredContainer.css"
 import "../../anystyles/speedsolveruikit.css"
 import PrimaryButton from "../../components/primaryButton/PrimaryButton"
 
 import styles from "./AccessPage.module.css"
 import AuthorizationType from "../../types/enums/AuthorizationType"
-import axios from "axios"
-
-import API_URL from "../../types/api/api"
 import Swal from "sweetalert2"
-import { toast, ToastContainer } from "react-toastify"
+import { ToastContainer } from "react-toastify"
 
 interface AuthTypeProp {
     action: AuthorizationType
@@ -19,43 +16,31 @@ interface AuthTypeProp {
 
 const AccessPage: React.FC<AuthTypeProp> = ({ action }) => {
 
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
 
-    async function Register(email: string, password: string) {
+    async function Register() {
         
-        const data = {
-            'email': email,
-            'password': password
-        }
-
-        try {
-            var response = await axios.post(`${API_URL()}/access/register`, data)
-            return response
-        }
-        catch(error) {
-            throw error
-        }
+        Swal.fire(
+            {
+                title: 'Регистрация',
+                text: 'Регистрация находится в разработке.',
+                confirmButtonText: 'Понятно',
+                showConfirmButton: true,
+                confirmButtonColor: '#B4CBDB'
+            }
+        )
     }
 
-    async function Authorize(email: string, password: string) {
+    async function Authorize() {
 
-        const data = {
-            'username': email,
-            'password': password
-        }
-
-        const headers = {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        }
-
-        try {
-            var response = await axios.post(`${API_URL()}/access/authorize`, data, { headers: headers })
-            return response
-        }
-        catch(error) {
-            throw error
-        }
+        Swal.fire(
+            {
+                title: 'Авторизация',
+                text: 'Авторизация находится в разработке.',
+                confirmButtonText: 'Понятно',
+                showConfirmButton: true,
+                confirmButtonColor: '#B4CBDB'
+            }
+        )
     }
 
 
@@ -74,25 +59,11 @@ const AccessPage: React.FC<AuthTypeProp> = ({ action }) => {
                     </div>
 
                     <div className={styles.mainForm}>
-                        <input type="text" placeholder="Логин" className="defaultInput" onChange={(e) => { setEmail(e.target.value) }}/>
-                        <input type="password" placeholder="Пароль" className="defaultInput" onChange={(e) => { setPassword(e.target.value) }}/>
+                        <input type="text" placeholder="Логин" className="defaultInput"/>
+                        <input type="password" placeholder="Пароль" className="defaultInput"/>
                         <PrimaryButton text={text} onClick={action === AuthorizationType.LOGIN ? 
-                            () => Authorize(email, password).then(res => {
-                                Swal.fire({
-                                    icon: 'success',
-                                    title: res.data.access_token,
-                                    showConfirmButton: true,
-                                })
-                            }).catch(() => {
-                              toast.error("Что-то пошло не так.")  
-                            }) 
-                            : () => Register(email, password).then(() => {
-                                Swal.fire({
-                                    icon: 'success',
-                                    title: "Вы успешно зарегистрировались в сервисе. \nСпасибо, что Вы с нами <3",
-                                    showConfirmButton: true,
-                                })
-                            }).catch(() => {toast.error(`Вероятно, такой пользователь уже существует :(`)})}/>
+                            () => Authorize()
+                            : () => Register()}/>
                     </div>
 
                 </div>

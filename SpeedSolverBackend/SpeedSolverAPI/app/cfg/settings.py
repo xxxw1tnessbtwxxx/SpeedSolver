@@ -7,10 +7,14 @@ class Settings(BaseSettings):
     POSTGRES_USER: str
     POSTGRES_PASSWORD: str
     POSTGRES_DB: str
+
     API_BASE_PORT: int
+
     JWT_SECRET_KEY: str
-    JWT_EXPIRES_AT: int
+    JWT_ACCESS_TOKEN_LIFETIME_MINUTES: int
+    JWT_REFRESH_TOKEN_LIFETIME_HOURS: int
     JWT_ALGORITHM: str
+    
     class Config:
         env_file = ".env"
 
