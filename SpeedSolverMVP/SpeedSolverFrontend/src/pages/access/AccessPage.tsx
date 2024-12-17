@@ -5,7 +5,6 @@ import PrimaryButton from "../../components/primaryButton/PrimaryButton"
 
 import styles from "./AccessPage.module.css"
 import AuthorizationType from "../../types/enums/AuthorizationType"
-import Swal from "sweetalert2"
 
 
 interface AuthTypeProp {
@@ -23,15 +22,7 @@ const AccessPage: React.FC<AuthTypeProp> = ({ action }) => {
 
     async function Authorize() {
 
-        Swal.fire(
-            {
-                title: 'Авторизация',
-                text: 'Авторизация находится в разработке.',
-                confirmButtonText: 'Понятно',
-                showConfirmButton: true,
-                confirmButtonColor: '#B4CBDB'
-            }
-        )
+        
     }
 
 
